@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[3]]></id>
+		<question><![CDATA[Quel est le taux de placement sur le marché du travail ?]]></question>
+		<reponse><![CDATA[Le programme TIM ne dispose pas de données locales pour les trois dernières années. Cependant, d’après les perspectives professionnelles d’Emploi-Québec (2019-2023) les perspectives d’emplois pour l’intégration multimédia sont bonnes partout au Québec. Dans certaines régions elles sont excellentes. ]]></reponse>
+		<theme_id><![CDATA[3]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[4]]></id>
+		<question><![CDATA[Dans quels programmes d'études puis-je aller après les techniques d'intégration multimédia?]]></question>
+		<reponse><![CDATA[<p>La formation technique au collégial permet d’accéder directement au marché du travail avec un maximum de compétences.</p>
+Mais voici une liste des programmes d'études universitaires qui pourraient enrichir votre formation au collégial:
+<ul>
+<li>Baccalauréat en création numérique concentration cinéma, création 3 D et technologie Web </li>
+<li>Baccalauréat en art et science de l’animation</li>
+<li>Certificat en art et science de l’animation</li>
+<li>Baccalauréat en design graphique</li>
+<li>Baccalauréat en informatique (B. Sc. A.)</li>
+<li>Baccalauréat en communication (création médias – médias interactifs)</li>
+<li>Baccalauréat en génie des technologies de l’information</li>
+<li>Baccalauréat (Majeure en conception de jeux vidéo)</li>
+<li>BFA —Design and Computation Arts</li>
+</ul>]]></reponse>
+		<theme_id><![CDATA[4]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[5]]></id>
+		<question><![CDATA[Quel est le revenu de départ d’une personne diplômée qui accède au marché du travail ?]]></question>
+		<reponse><![CDATA[Selon les dernières données recueillies, le salaire horaire de départ se situe entre 18$ et 22$. Mais la pénurie de main d'œuvre crée une pression à la hausse sur les salaires. Ceci permet de croire que le taux horaire de base augmentera.]]></reponse>
+		<theme_id><![CDATA[3]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[7]]></id>
+		<question><![CDATA[Quel est le revenu d’un intégrateur ou d'une intégratrice après cinq ans sur le marché du travail ?]]></question>
+		<reponse><![CDATA[Nous ne disposons pas de données exactes pour ce nombre d’année d’expérience. Sachez que le salaire horaire peut varier d’un type d’entreprise à l’autre et que les bénéfices marginaux (congé maladie, fonds retraite, etc.) peuvent bonifier le salaire horaire.
+Selon le site reperes.qc.ca , le salaire annuel maximum moyen, avec de l’expérience, varie de 83 000 $ à 97 999 $. Ce qui donne un taux horaire entre 49 $ à 58 $/heure. 
+]]></reponse>
+		<theme_id><![CDATA[3]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[8]]></id>
+		<question><![CDATA[Dois-je me procurer un ordinateur personnel pour suivre cette formation ?]]></question>
+		<reponse><![CDATA[Depuis l’automne 2020, tous les personnes qui sont admises au programme d'étude doivent être équipées d’un ordinateur portable afin de suivre la formation. Des écrans d'appoint sont mis à disposition dans tous les laboratoires.]]></reponse>
+		<theme_id><![CDATA[1]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[9]]></id>
+		<question><![CDATA[L’ordinateur Mac est-il obligatoire pour ce programme ?]]></question>
+		<reponse><![CDATA[Nous privilégions l’utilisation de l’environnement Mac dans notre programme en raison notamment de l’uniformité et de la stabilité de cette plateforme et de son usage répandu dans le milieu professionnel.
+La vaste majorité des démonstrations effectuées en classe est réalisée dans l’environnement Mac. Tous les outils logiciels que nous utilisons sont offerts également dans l’environnement Windows.]]></reponse>
+		<theme_id><![CDATA[1]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[10]]></id>
+		<question><![CDATA[Quels logiciels sont utilisés pour suivre la formation ?]]></question>
+		<reponse><![CDATA[Dans la mesure du possible, nous utilisons des logiciels « open source » ou des versions allégées gratuites. Plusieurs applications sont offertes gratuitement aux étudiant.e.s moyennant une preuve de fréquentation d'une école. La suite Adobe CC est celle utilisée pour l’axe du traitement des médias du programme. D’autres logiciels ou cadriciels sont ciblés pour chaque cours.]]></reponse>
+		<theme_id><![CDATA[1]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[11]]></id>
+		<question><![CDATA[Quel est le coût des notes de cours et des livres que je dois me procurer ?]]></question>
+		<reponse><![CDATA[L’achat de livre n’est pas obligatoire. Des notes de cours numériques sont généralement fournies gratuitement aux étudiant.e.s. par les professeur.e.s. Des références en ligne sont listées pour chaque cours. ]]></reponse>
+		<theme_id><![CDATA[1]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[12]]></id>
+		<question><![CDATA[Est-il possible de compléter la formation en moins de trois ans si j’ai déjà réussi mes cours de formation générale ?]]></question>
+		<reponse><![CDATA[Non, l’organisation du DEC Techniques d’intégration multimédia ne permet pas actuellement de raccourcir la durée de la formation. C’est que chaque cours est donné une fois par année à la session d’automne ou à la session d’hiver. Comme certains cours, pas tous, sont préalables à d’autres ça devient difficile de faire le DEC en accéléré. 
+Il est possible de rencontrer un.e aide pédagogique individuel.le pour organiser un cheminement particulier.]]></reponse>
+		<theme_id><![CDATA[4]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[13]]></id>
+		<question><![CDATA[Est-il possible de compléter la formation en moins de trois ans si j’ai déjà un autre DEC en poche ?]]></question>
+		<reponse><![CDATA[Non, l’organisation du DEC Techniques d’intégration multimédia ne permet pas actuellement de raccourcir la durée de la formation. C’est que chaque cours est donné une fois par année à la session d’automne ou à la session d’hiver. Comme certains cours, pas tous, sont préalables à d’autres ça devient difficile de faire le DEC en accéléré. 
+Il est possible de rencontrer un.e aide pédagogique individuel.le pour organiser un cheminement particulier.
+]]></reponse>
+		<theme_id><![CDATA[4]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[14]]></id>
+		<question><![CDATA[Existe-t-il une version intensive du DEC en multimédia au Cégep de Sainte-Foy ?]]></question>
+		<reponse><![CDATA[La formation continue du Cégep de Sainte-Foy offre des formations adaptées au contraintes des personnes en emploi. Le programme Design interactif et intégration Web  - en ligne pourrait vous convenir.
+https://dfc.cegep-ste-foy.qc.ca/programmes-et-cours/graphisme-et-web/design-interactif-et-integration-web-en-ligne/]]></reponse>
+		<theme_id><![CDATA[4]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[15]]></id>
+		<question><![CDATA[Les stages sont-ils obligatoires ?]]></question>
+		<reponse><![CDATA[Le programme TIM du Cégep de Sainte-Foy offre des stages en Alternance travail études (ATE) l’été et un stage crédité en session terminale qui peut être réalisé en France. La formule ATE est optionnelle. Elle ajoute une plus value à votre diplôme.
+Le stage crédité en entreprise est obligatoire et se tient à la fin de la formation, à la dernière session du programme. 
+Notez qu’il est possible de faire son stage crédité en France. Plusieurs étudiant.e.s québécois.e.s l’ont fait avant 2019. 
+]]></reponse>
+		<theme_id><![CDATA[9]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[16]]></id>
+		<question><![CDATA[Les stages sont-ils rémunérés ?]]></question>
+		<reponse><![CDATA[Oui, les stages sont rémunérés. Les entreprises peuvent se prévaloir de crédits d’impôt pour l’embauche de stagiaire.]]></reponse>
+		<theme_id><![CDATA[9]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[17]]></id>
+		<question><![CDATA[Puis-je réaliser une partie de mes études à l’étranger ?]]></question>
+		<reponse><![CDATA[Une entente de collaboration est convenue avec un Institut Universitaire Technique français. Cette collaboration est à valider à chaque année et permet à un.e étudiant.e de troisième année d’aller suivre des cours en France. Aucun.e étudiant.e ne s’est prévalu de cette option depuis la création du programme. Plusieurs étudiant.e.s français.e.s sont toutefois venu.e.s suivre les cours de la dernière session en TIM au cégep de Sainte-Foy.
+
+Notez qu’il est possible de faire son stage crédité en France. Plusieurs étudiant.e.s québécois.e.s l’ont fait avant 2019. 
+]]></reponse>
+		<theme_id><![CDATA[9]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[27]]></id>
+		<question><![CDATA[asdfadf]]></question>
+		<reponse><![CDATA[]]></reponse>
+		<theme_id><![CDATA[0]]></theme_id>
+	</node>
+	<node>
+		<id><![CDATA[28]]></id>
+		<question><![CDATA[asfdasdfa]]></question>
+		<reponse><![CDATA[]]></reponse>
+		<theme_id><![CDATA[0]]></theme_id>
+	</node>
+</data>
