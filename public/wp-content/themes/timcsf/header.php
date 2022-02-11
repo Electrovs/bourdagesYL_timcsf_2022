@@ -17,15 +17,40 @@
 </head>
 
 <body>
-<header class="entete">
-    <h1 class="entete__titre">
-        <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>"<?php bloginfo("name");?></a>
-    </h1>
-    <h2 class="entete__slogan"><?php bloginfo("description");?></h2>
+<header class="header">
+    <div class="header__top">
+        <div class="conteneur">
+            <div class="header__top__logo"><a href="#" class="header__top__logo__lien">{TIM}</a></div>
+            <nav class="menu menu-ferme">
+                <ul class="menu__liste">
+                    <li class="menu__item">
+                        <a href="#" class="menu__lien">Réalisations</a>
+                        <ul class="menu__sousListe">
+                            <li class="menu__sousItem"><a href="#" class="menu__sousLien">1re Année</a></li>
+                            <li class="menu__sousItem"><a href="#" class="menu__sousLien">2e Année</a></li>
+                            <li class="menu__sousItem"><a href="#" class="menu__sousLien">3e Année</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu__sousLien">Stages</a></li>
+                    <li><a href="#" class="menu__sousLien">Nous Joindre</a></li>
+                </ul>
+            </nav>
+            <a class="header__bouton boutonInscrit" href="#">Je m'inscris</a>
+            <div class="header__mobileHeader">
+                <div class="header__mobileHeader__titre">
+                    <h1 class="header__mobileHeader__titre__h1">TECHNIQUES D'INTÉGRATION MULTIMÉDIAS</h1>
+                    <p class="header__mobileHeader__titre__p">WEB & APPS</p>
+                </div>
+                <i class="header__mobileHeader__icon">Icon ordinateur</i>
+            </div>
+        </div>
+    </div>
+    <div class="header__bandeau">
+        <picture class="header__bandeau__picture">
+            <h1 class="header__bandeau__titre__h1">TECHNIQUES D'INTÉGRATION MULTIMÉDIAS</h1>
+            <p class="header__bandeau__titre__p">WEB & APPS</p>
+
+            <img class="header__bandeau__image" src="https://via.placeholder.com/375x220" alt="image hero - techniques d'intégration multimédia" />
+        </picture>
+    </div>
 </header>
-<?php if(has_nav_menu("principal")){?>
-    <nav class="navigation">
-        <?php wp_nav_menu(array("theme_location"=>"principal"));?>
-    </nav>
-<?php } ?>
-<div class="contenu">
