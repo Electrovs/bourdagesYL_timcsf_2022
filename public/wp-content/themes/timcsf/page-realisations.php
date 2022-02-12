@@ -9,16 +9,74 @@ if(is_active_sidebar("gauche")){?>
         <?php get_sidebar("gauche")?>
     </aside>
 <?php } ?>
-
-    <main class="page">
-        <?php the_post();?>
-        <div class="entetePage">
-            <h2><?php the_title()?></h2>
+</header>
+<main class="realisations">
+    <div class="conteneur">
+        <h1 class="realisations__titre">Réalisations 1re année</h1>
+        <div class="realisations__boutons__navigation">
+            <a class="realisations__boutons__navigation__1re" href="#">1re année</a>
+            <a class="realisations__boutons__navigation__2e" href="#">2e année</a>
+            <a class="realisations__boutons__navigation__3e" href="#">3e année</a>
         </div>
-        <p>
-            <?php the_content();?>
-        </p>
-    </main>
+        <div class="realisations__galerie">
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a href="#" class="realisations__galerie__realisation">
+                <img
+                        class="realisations__galerie__realisation__image"
+                        src="https://via.placeholder.com/355x200"
+                        alt="image d'une réalisation"
+                >
+                <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
+                <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+            </a>
+            <a class="realisations__boutons__voirPlus" href="#">Voir plus de réalisations</a>
+        </div>
+    </div>
+</main>
 
 
 <?php
