@@ -13,6 +13,52 @@ if(is_active_sidebar("gauche")){?>
 <main class="contact">
     <div class="conteneur">
         <h1 class="contact__titre">Nous joindre</h1>
+        <div class="contact__responsables">
+            <div class="contact__responsables__responsable">
+                <img
+                        class="contact__responsables__responsable__image"
+                        src="https://via.placeholder.com/235x235"
+                        alt="photo d'un responsable"
+                >
+                <h2 class="contact__responsables__responsable__nom">Sylvain Lamoureux</h2>
+                <p class="contact__responsables__responsable__poste">Coordonnateur départemental</p>
+                <h3 class="contact__responsables__responsable__titreTelephone">Téléphone</h3>
+                <p class="contact__responsables__responsable__numeroTelephone">(418)-659-6600 poste 6662</p>
+            </div>
+            <div class="contact__responsables__responsable">
+                <img
+                        class="contact__responsables__responsable__image"
+                        src="https://via.placeholder.com/235x235"
+                        alt="photo d'un responsable"
+                >
+                <h2 class="contact__responsables__responsable__nom">Sylvain Lamoureux</h2>
+                <p class="contact__responsables__responsable__poste">Coordonnateur départemental</p>
+                <h3 class="contact__responsables__responsable__titreTelephone">Téléphone</h3>
+                <p class="contact__responsables__responsable__numeroTelephone">(418)-659-6600 poste 6662</p>
+            </div>
+            <div class="contact__responsables__responsable">
+                <img
+                        class="contact__responsables__responsable__image"
+                        src="https://via.placeholder.com/235x235"
+                        alt="photo d'un responsable"
+                >
+                <h2 class="contact__responsables__responsable__nom">Sylvain Lamoureux</h2>
+                <p class="contact__responsables__responsable__poste">Coordonnateur départemental</p>
+                <h3 class="contact__responsables__responsable__titreTelephone">Téléphone</h3>
+                <p class="contact__responsables__responsable__numeroTelephone">(418)-659-6600 poste 6662</p>
+            </div>
+            <div class="contact__responsables__responsable">
+                <img
+                        class="contact__responsables__responsable__image"
+                        src="https://via.placeholder.com/235x235"
+                        alt="photo d'un responsable"
+                >
+                <h2 class="contact__responsables__responsable__nom">Sylvain Lamoureux</h2>
+                <p class="contact__responsables__responsable__poste">Coordonnateur départemental</p>
+                <h3 class="contact__responsables__responsable__titreTelephone">Téléphone</h3>
+                <p class="contact__responsables__responsable__numeroTelephone">(418)-659-6600 poste 6662</p>
+            </div>
+        </div>
         <form class="contact__formulaire">
             <div class="contact__formulaire__groupInput">
                 <label for="prenom" class="contact__formulaire__label">Prénom</label>
