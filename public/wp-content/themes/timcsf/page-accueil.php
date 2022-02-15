@@ -3,12 +3,7 @@
 /*Template name: Accueil*/
 
 /*echo "page-accueil.php";*/
-
-if(is_active_sidebar("gauche")){?>
-    <aside id="gauche" class="barregauche">
-        <?php get_sidebar("gauche")?>
-    </aside>
-<?php } ?>
+?>
     <div class="header__bandeau">
         <div class="header__bandeau__blockTitre">
             <h1 class="header__bandeau__blockTitre__titre">Techniques d'intégration multimédias</h1>
@@ -188,50 +183,96 @@ if(is_active_sidebar("gauche")){?>
             </div>
             <div class="formation__bottom__temoignages">
                 <h2 class="formation__bottom__temoignages__titre">Témoignages</h2>
-                <div class="formation__bottom__temoignages__temoignage">
-                    <div class="formation__bottom__temoignages__photoInfo">
-                        <div class="formation__bottom__temoignages__photoInfo__photo">
-                            <img
-                                class="formation__bottom__temoignages__photoInfo__photo__image"
-                                src="https://via.placeholder.com/168"
-                                alt="photo de du témoin"
-                            >
-                            <p class="formation__bottom__temoignages__photoInfo__photo__annee">Diplomé.e 2013</p>
+                <?php
+                //à mettre dans la page pour afficher les responsables
+                //**************************************************
+
+
+
+                //Requête pour obtenir les infos des responsables
+                $args = array(
+                    'post_type' => 'témoignages',
+                    'posts_per_page' => 1,
+                    'post_status' => 'publish',
+                    'orderby' => 'rand',
+                    'order' => 'ASC',
+                );
+
+                $the_query = new WP_Query( $args );
+
+                if($the_query->have_posts()){
+                    while($the_query->have_posts()) {
+                        $the_query->the_post();?>
+                        <?php //Photo obtient un tableau (sizes) contenant les différentes tailles d'image
+                        $photo=get_field("photo");
+                        //ici on affiche seulement la taille thumbnail
+                        ?>
+                        <div class="formation__bottom__temoignages__temoignage">
+                            <div class="formation__bottom__temoignages__photoInfo">
+                                <div class="formation__bottom__temoignages__photoInfo__photo">
+                                    <img
+                                            class="formation__bottom__temoignages__photoInfo__photo__image"
+                                            src="<?php echo $photo["sizes"]["large"]; ?>"
+                                            alt="photo de du témoin"
+                                    >
+                                    <p class="formation__bottom__temoignages__photoInfo__photo__annee">Diplomé.e <?php echo get_field("annee_diplomation");?></p>
+                                </div>
+                                <div class="formation__bottom__temoignages__photoInfo__info">
+                                    <p class="formation__bottom__temoignages__photoInfo__info__nom"><?php echo get_field("temoin");?></p>
+                                    <p class="formation__bottom__temoignages__photoInfo__info__emploi"><?php echo get_field("titre_poste");?></p>
+                                </div>
+                            </div>
+                            <p class="formation__bottom__temoignages__texte">
+                                <?php echo get_field("temoignage");?>
+                            </p>
                         </div>
-                        <div class="formation__bottom__temoignages__photoInfo__info">
-                            <p class="formation__bottom__temoignages__photoInfo__info__nom">Frédérique Fortier</p>
-                            <p class="formation__bottom__temoignages__photoInfo__info__emploi">Développeuse Web Front-End chez Spektrum Média</p>
+                    <?php }
+                } ?>
+                <?php
+                //à mettre dans la page pour afficher les responsables
+                //**************************************************
+
+
+
+                //Requête pour obtenir les infos des responsables
+                $args = array(
+                    'post_type' => 'témoignages',
+                    'posts_per_page' => 1,
+                    'post_status' => 'publish',
+                    'orderby' => 'rand',
+                    'order' => 'ASC',
+                );
+
+                $the_query = new WP_Query( $args );
+
+                if($the_query->have_posts()){
+                    while($the_query->have_posts()) {
+                        $the_query->the_post();?>
+                        <?php //Photo obtient un tableau (sizes) contenant les différentes tailles d'image
+                        $photo=get_field("photo");
+                        //ici on affiche seulement la taille thumbnail
+                        ?>
+                        <div class="formation__bottom__temoignages__temoignage">
+                            <div class="formation__bottom__temoignages__photoInfo">
+                                <div class="formation__bottom__temoignages__photoInfo__info">
+                                    <p class="formation__bottom__temoignages__photoInfo__info__nom"><?php echo get_field("temoin");?></p>
+                                    <p class="formation__bottom__temoignages__photoInfo__info__emploi"><?php echo get_field("titre_poste");?></p>
+                                </div>
+                                <div class="formation__bottom__temoignages__photoInfo__photo">
+                                    <img
+                                            class="formation__bottom__temoignages__photoInfo__photo__image"
+                                            src="<?php echo $photo["sizes"]["large"]; ?>"
+                                            alt="photo de du témoin"
+                                    >
+                                    <p class="formation__bottom__temoignages__photoInfo__photo__annee">Diplomé.e <?php echo get_field("annee_diplomation");?></p>
+                                </div>
+                            </div>
+                            <p class="formation__bottom__temoignages__texte">
+                                <?php echo get_field("temoignage");?>
+                            </p>
                         </div>
-                    </div>
-                    <p class="formation__bottom__temoignages__texte">
-                        Surfant sur le web depuis toujours, j’ai choisi TIM pour son mélange de design et de programmation qui permet
-                        d’allier le côté créatif au côté logique. Mon choix s’est confirmé lors de mon premier cours de programmation, où
-                        j’ai eu la piqûre dès que j’ai vu mon code se transformer sous mes yeux en élément interactif ! J’adore la diversité
-                        des projets et des nouveaux défis qui se présentent chaque jour. Grâce à eux, mes connaissances sont constamment enrichies.
-                    </p>
-                </div>
-                <div class="formation__bottom__temoignages__temoignage">
-                    <div class="formation__bottom__temoignages__photoInfo">
-                        <div class="formation__bottom__temoignages__photoInfo__info">
-                            <p class="formation__bottom__temoignages__photoInfo__info__nom">Stéphanie Parcel</p>
-                            <p class="formation__bottom__temoignages__photoInfo__info__emploi">Développeuse Web</p>
-                        </div>
-                        <div class="formation__bottom__temoignages__photoInfo__photo">
-                            <img
-                                class="formation__bottom__temoignages__photoInfo__photo__image"
-                                src="https://via.placeholder.com/168"
-                                alt="photo de du témoin"
-                            >
-                            <p class="formation__bottom__temoignages__photoInfo__photo__annee">Diplomé.e 2014</p>
-                        </div>
-                    </div>
-                    <p class="formation__bottom__temoignages__texte">
-                        Je savais que voulais créer à l’aide d’un ordinateur, mais je ne savais pas quoi. Le design m’intéressait
-                        autant que la programmation. La TIM a donc été un un excellent moyen de toucher à plusieurs facettes du domaine
-                        et ainsi trouver ma passion. Aujourd’hui, que ce soit d’un client, d’un patron ou d’un collègue, entendre la
-                        phrase: « tu viens de me simplifier la vie », ça vaut de l’or!
-                    </p>
-                </div>
+                    <?php }
+                } ?>
             </div>
             <div class="formation__bottom__inscription">
                 <h2 class="formation__bottom__inscription__titre">Inscription</h2>
@@ -283,7 +324,7 @@ if(is_active_sidebar("gauche")){?>
                     <a class="formation__bottom__etudiantJour__info__boutonsBenoit boutonBleu" href="#">Écris à Benoît Frigon</a>
                     <img
                         class="formation__bottom__etudiantJour__image"
-                        src="https://via.placeholder.com/375x171"
+                        src="<?php echo get_template_directory_uri();?>/liaisons/images/etuJourTable.jpg"
                         alt="photo d'une scène en classe"
                     >
                 </div>
@@ -291,13 +332,4 @@ if(is_active_sidebar("gauche")){?>
         </div>
     </div>
 </main>
-
-
-<?php
-if(is_active_sidebar("droite")){?>
-    <aside id="droite" class="barredroite">
-        <?php get_sidebar("droite")?>
-    </aside>
-<?php } ?>
-
 <?php get_footer(); ?>

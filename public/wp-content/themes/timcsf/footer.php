@@ -1,17 +1,17 @@
 <footer class="footer">
     <div class="conteneur">
-        <div class="footer__logo__TIM"><a href="#" class="footer__logo__TIM__lien">{TIM}</a></div>
-        <a class="footer__bouton boutonInscrit" href="#">Je m'inscris</a>
+        <div class="footer__logo__TIM"><a href="<?php echo get_permalink(14)?>" class="footer__logo__TIM__lien">{TIM}</a></div>
+        <a class="footer__bouton boutonInscrit" href="<?php echo get_post(125)->texte?>"><?php echo get_post(470)->titre?></a>
         <div class="footer__media">
-            <a href="#" class="footer__media__bouton fa fa-facebook"></a>
-            <a href="#" class="footer__media__bouton fa fa-twitter"></a>
-            <a href="#" class="footer__media__bouton fa fa-linkedin"></a>
-            <a href="#" class="footer__media__bouton fa fa-instagram"></a>
+            <a href="<?php echo get_post(126)->texte?>" class="footer__media__bouton fa fa-facebook"></a>
+            <a href="<?php echo get_post(127)->texte?>" class="footer__media__bouton fa fa-twitter"></a>
+            <a href="<?php echo get_post(128)->texte?>" class="footer__media__bouton fa fa-linkedin"></a>
+            <a href="<?php echo get_post(148)->texte?>" class="footer__media__bouton fa fa-instagram"></a>
         </div>
-        <div class="footer__logo__CSF"><a href="#" class="footer__logo__CSF__lien"></a></div>
+        <div class="footer__logo__CSF"><a href="<?php echo get_post(124)->texte?>" class="footer__logo__CSF__lien"></a></div>
         <div class="footer__copyright">
-            <small class="footer__copyright__small__01">Conception et développement web par Yves-Luc Bourdages</small>
-            <small class="footer__copyright__small__02">Tous droits réservés © 2022 Techniques d'intégration multimédia - Web et apps, Cégep de Sainte-Foy.</small>
+            <small class="footer__copyright__small__01"><?php echo get_post(471)->titre?></small>
+            <small class="footer__copyright__small__02"><?php echo get_post(471)->texte?></small>
         </div>
     </div>
 </footer>

@@ -28,11 +28,5 @@
                 </nav>
             <?php } ?>
             <a class="header__bouton boutonInscrit" href="#">Je m'inscris</a>
-<!--            <div class="header__mobileHeader">-->
-<!--                <div class="header__mobileHeader__titre">-->
-<!--                    <h1 class="header__mobileHeader__titre__h1">TECHNIQUES D'INTÉGRATION MULTIMÉDIAS</h1>-->
-<!--                    <p class="header__mobileHeader__titre__p">WEB & APPS</p>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </div>

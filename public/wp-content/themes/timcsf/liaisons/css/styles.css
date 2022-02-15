@@ -628,6 +628,8 @@ p, h2, h3 {
 .formation__bottom__temoignages__photoInfo__photo__image {
   border-radius: 8px;
   border: solid 5px #FFFFFF;
+  width: 168px;
+  height: 168px;
 }
 .formation__bottom__temoignages__photoInfo__photo__annee {
   text-align: center;
@@ -736,6 +738,105 @@ p, h2, h3 {
   width: 375px;
 }
 
+.contact__titre {
+  text-transform: uppercase;
+  font-size: 32px;
+  text-align: center;
+}
+.contact__responsables {
+  display: flex;
+  flex-direction: column;
+}
+.contact__responsables__responsable {
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  padding-bottom: 20px;
+  background-color: #004C94;
+  color: #FFFFFF;
+}
+.contact__responsables__responsable__image {
+  width: 235px;
+  height: 235px;
+  border: 5px solid #004C94;
+  border-radius: 8px;
+}
+.contact__responsables__responsable__nom {
+  padding: 10px 0 0 5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.contact__responsables__responsable__poste {
+  padding: 5px 0 0 5px;
+  font-size: 16px;
+  font-weight: 300;
+  width: 225px;
+}
+.contact__responsables__responsable__titreTelephone {
+  padding: 20px 0 0 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contact__responsables__responsable__numeroTelephone {
+  padding: 5px 0 0 5px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.contact__formulaire {
+  margin-top: 50px;
+  border: solid 5px #F88728;
+  border-radius: 8px;
+  background-color: #F0F0F0;
+  padding: 0 10px;
+}
+.contact__formulaire__groupInput {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.contact__formulaire__label {
+  font-size: 16px;
+}
+.contact__formulaire__label__labelCheckbox {
+  font-weight: 300;
+}
+.contact__formulaire__input {
+  height: 50px;
+  margin-top: 5px;
+  border-color: #B4B4B4;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.contact__formulaire__input__checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.contact__formulaire__input__message {
+  height: 300px;
+  margin-top: 5px;
+  border-color: #B4B4B4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: none;
+}
+.contact__formulaire__exemple {
+  padding-top: 5px;
+  color: #787878;
+}
+.contact__formulaire__autorisation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+.contact__formulaire__erreur {
+  display: none;
+}
+.contact__formulaire__bouton {
+  color: #FFFFFF;
+  margin: 30px 0;
+}
+
 /****** MODULE ******/
 .footer {
   color: #FFFFFF;
@@ -787,7 +888,7 @@ p, h2, h3 {
 }
 
 .header__top {
-  display: none;
+  background-color: black;
 }
 .header__bandeau__blockTitre {
   background-color: #2688D0;

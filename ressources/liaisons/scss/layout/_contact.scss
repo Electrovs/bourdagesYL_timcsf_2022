@@ -1,0 +1,125 @@
+
+
+
+
+
+
+.contact{
+  &__titre{
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &__responsables{
+    display: flex;
+    flex-direction: column;
+
+    &__responsable{
+
+      border-radius: 8px;
+      margin: 0 auto 20px auto;
+      padding-bottom: 20px;
+      background-color: $bleuP;
+      color: $blanc;
+
+      &__image{
+        width: 235px;
+        height: 235px;
+        border: 5px solid $bleuP;
+        border-radius: 8px;
+      }
+
+      &__nom{
+        padding: 10px 0 0 5px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      &__poste{
+        padding: 5px 0 0 5px;
+        font-size: 16px;
+        font-weight: 300;
+        width: 225px;
+      }
+
+      &__titreTelephone{
+        padding: 20px 0 0 5px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      &__numeroTelephone{
+        padding: 5px 0 0 5px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__formulaire{
+    margin-top: 50px;
+    border: solid 5px $orangeP;
+    border-radius: 8px;
+    background-color: $gris1;
+    padding: 0 10px;
+
+    &__groupInput{
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__label{
+      font-size: 16px;
+
+      &__labelCheckbox{
+        font-weight: 300;
+      }
+    }
+    &__input{
+      height: 50px;
+      margin-top: 5px;
+      border-color: $gris3;
+      border-radius: 8px;
+      box-sizing: border-box;
+
+      &__checkbox{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      &__message{
+        height: 300px;
+        margin-top: 5px;
+        border-color: $gris3;
+        border-radius: 8px;
+        box-sizing: border-box;
+        resize: none;
+      }
+    }
+    &__exemple{
+      padding-top: 5px;
+      color: $gris5;
+    }
+    &__autorisation{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    &__erreur{
+      display: none;
+    }
+
+    &__bouton{
+      color: $blanc;
+      margin: 30px 0;
+
+
+    }
+
+  }
+}
