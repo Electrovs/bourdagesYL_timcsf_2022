@@ -16,118 +16,38 @@
     <div class="formation__top">
         <div class="conteneur">
             <div class="formation__top__info">
-                <p class="formation__top__info__p1">
-                    Utilisabilité, accessibilité, portabilité sont les trois piliers du programme TIM-Web et apps.
-                </p>
-                <p class="formation__top__info__p2">Deux axes de formation:
-                    <ul class="formation__top__info__p2__liste">
-                        <li class="formation__top__info__p2__item">Conception + traitement des médias</li>
-                        <li class="formation__top__info__p2__item">Intégration + programmation</li>
-                    </ul>
-                </p>
-                <p class="formation__top__info__p3">
-                    Un seul but, former des technicien.ne.s polyvalent.e.s, aptes à réaliser des sites et des applications Web de A à Z.
-                </p>
+                <?php echo get_post(130)->texte?>
             </div>
             <div class="formation__top__fichesInfo">
-                <h2 class="formation__top__fichesInfo__titre">Axes de la formation</h2>
+                <h2 class="formation__top__fichesInfo__titre"><?php echo get_post(473)->titre?></h2>
                 <div class="formation__top__fichesInfo__fiches">
                     <div class="formation__top__fichesInfo__fiches__programmation">
                         <div class="formation__top__fichesInfo__fiches__entete">
-                            <h2 class="formation__top__fichesInfo__fiches__entete__h2">25% Programmation</h2>
+                            <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(134)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <p class="formation__top__fichesInfo__fiches__p">
-                            Rendre fonctionnel un produit numérique interactif du côté back-end.
-                            Manipulation de bases de données pour l’affichage dynamique, le tout de façon sémantique
-                            dans un code documenté, portable et robuste.
-                        </p>
-                        <p class="formation__top__fichesInfo__fiches__titreListe">Compétences et logiciels en lien</p>
-                        <div class="formation__top__fichesInfo__fiches__listes">
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Php</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Sql / My sql</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Orienté objet</li>
-                            </ul>
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Mvc</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Phpstorm</li>
-                            </ul>
-                        </div>
+                        <?php echo get_post(134)->texte?>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__integration">
                         <div class="formation__top__fichesInfo__fiches__entete">
-                            <h2 class="formation__top__fichesInfo__fiches__entete__h2">25% Intégration</h2>
+                            <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(133)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <p class="formation__top__fichesInfo__fiches__p">
-                            Transposer les médias et le design en code sémantique et programmer l’interactivité du côté front-end.
-                            S’assurer de l’accessibilité de l’interface.
-                        </p>
-                        <p class="formation__top__fichesInfo__fiches__titreListe">Compétences et logiciels en lien</p>
-                        <div class="formation__top__fichesInfo__fiches__listes">
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Html</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Sass</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Css</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Ajax</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Responsive Web</li>
-                            </ul>
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Flex et grid</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Json</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Javascript</li>
-                                <li class="formation__top__fichesInfo__fiches__item">TypeScript</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Mobil first</li>
-                            </ul>
-                        </div>
+                        <?php echo get_post(133)->texte?>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__conception">
                         <div class="formation__top__fichesInfo__fiches__entete">
-                            <h2 class="formation__top__fichesInfo__fiches__entete__h2">25% Conception</h2>
+                            <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(131)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <p class="formation__top__fichesInfo__fiches__p">
-                            Analyser les besoins du client, puis concevoir des interfaces efficientes
-                            et attrayantes. Tester les fonctionnalités conçues. Design inclusif (accessibilité).
-                        </p>
-                        <p class="formation__top__fichesInfo__fiches__titreListe">Compétences et logiciels en lien</p>
-                        <div class="formation__top__fichesInfo__fiches__listes">
-                            <ul class="formation__top__fichesInfo__fiches__liste__01">
-                                <li class="formation__top__fichesInfo__fiches__item">Design d’interface web</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Expérience utilisateur</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Axure</li>
-                            </ul>
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Utilisabilité</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Ergonomie</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Accessibilité</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Figma</li>
-                            </ul>
-                        </div>
+                        <?php echo get_post(131)->texte?>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__media">
                         <div class="formation__top__fichesInfo__fiches__entete">
-                            <h2 class="formation__top__fichesInfo__fiches__entete__h2">15% Média</h2>
+                            <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(132)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <p class="formation__top__fichesInfo__fiches__p">
-                            Traitement et création de médias tel que : textes, images
-                            matricielles et vectorielles, photos, vidéos, sons.
-                        </p>
-                        <p class="formation__top__fichesInfo__fiches__titreListe">Compétences et logiciels en lien</p>
-                        <div class="formation__top__fichesInfo__fiches__listes">
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Suite Adobe CC</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Photomontages</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Effets spéciaux</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Son</li>
-                            </ul>
-                            <ul class="formation__top__fichesInfo__fiches__liste">
-                                <li class="formation__top__fichesInfo__fiches__item">Tournage et montage vidéo</li>
-                                <li class="formation__top__fichesInfo__fiches__item">Design cinétique</li>
-                            </ul>
-                        </div>
+                        <?php echo get_post(132)->texte?>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__autres">
                         <div class="formation__top__fichesInfo__fiches__entete">

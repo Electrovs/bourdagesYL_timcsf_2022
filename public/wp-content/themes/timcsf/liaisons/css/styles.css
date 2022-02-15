@@ -512,15 +512,17 @@ p, h2, h3 {
 .formation__top__fichesInfo__fiches__entete {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .formation__top__fichesInfo__fiches__entete__h2 {
   font-size: 24px;
   text-transform: uppercase;
+  padding-left: 5px;
 }
 .formation__top__fichesInfo__fiches__entete__- {
   font-size: 48px;
+  padding-right: 20px;
 }
 .formation__top__fichesInfo__fiches__programmation {
   background-color: #001058;

@@ -32,16 +32,18 @@
         &__entete {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
           align-items: center;
 
           &__h2 {
             font-size: 24px;
             text-transform: uppercase;
+            padding-left: 5px;
           }
 
           &__- {
             font-size: 48px;
+            padding-right: 20px;
           }
         }
 
