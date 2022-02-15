@@ -1,0 +1,331 @@
+
+
+
+
+
+
+.formation {
+
+  &__top {
+
+    &__info {
+      margin-top: 50px;
+      font-weight: 300;
+
+      &__p2 {
+        margin-top: 20px;
+      }
+    }
+
+    &__fichesInfo {
+
+      margin-top: 50px;
+
+      &__titre {
+        font-size: 24px;
+      }
+
+      &__fiches {
+        color: $blanc;
+        margin: 20px -10px 0 -10px;
+
+        &__entete {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+
+          &__h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+          }
+
+          &__- {
+            font-size: 48px;
+          }
+        }
+
+        &__programmation {
+          background-color: $bleu5;
+          padding: 10px;
+        }
+
+        &__integration {
+          background-color: $bleu4;
+          padding: 10px;
+        }
+
+        &__conception {
+          background-color: $bleuP;
+          padding: 10px;
+        }
+
+        &__media {
+          background-color: $bleu2;
+          padding: 10px;
+        }
+
+        &__autres {
+          background-color: $bleu1;
+          padding: 10px;
+        }
+
+        &__p {
+          font-weight: 300;
+        }
+
+        &__titreListe {
+          margin-top: 30px;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+
+        &__listes {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &__liste {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  &__bourses {
+    color: $blanc;
+    background-color: $bleu4;
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+    &__titre {
+      padding-top: 20px;
+      font-size: 32px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__texte {
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+
+    &__bouton {
+      margin-top: 30px;
+    }
+  }
+
+  &__bottom{
+
+    &__grille{
+      border: solid 5px $orangeP;
+      border-radius: 8px;
+      margin: 30px -10px;
+      padding: 20px 10px;
+
+      &__p{
+        padding-top: 20px;
+        font-weight: 300;
+      }
+
+      &__boutons{
+        &__grille{
+          margin-top: 20px;
+        }
+        &__p{
+          margin-top: 20px;
+          text-transform: uppercase;
+          font-size: 24px;
+          font-weight: 700;
+          text-align: center;
+        }
+        &__telecharger{
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__temoignages{
+      margin: 0 -10px;
+
+      &__temoignage{
+        background-color: $bleuP;
+        color: $blanc;
+        padding: 20px 10px;
+        margin-top: 20px;
+      }
+
+      &__titre{
+        padding: 20px 10px 0 10px;
+        font-weight: 700;
+      }
+
+      &__photoInfo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__photo{
+          background-color: $blanc;
+          color: $noir;
+          width: 178px;
+          height: 203px;
+          border-radius: 8px;
+
+          &__image{
+            border-radius: 8px;
+            border: solid 5px $blanc;
+          }
+
+          &__annee{
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+        }
+
+        &__info{
+          padding: 0 20px;
+
+          &__emploi{
+            padding-top: 20px;
+          }
+        }
+      }
+
+      &__texte{
+        margin-top: 20px;
+      }
+    }
+
+    &__inscription{
+      margin-top: 20px;
+
+      &__info{
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 300;
+
+        &__span{
+          font-weight: 700;
+          color: $bleuP;
+        }
+      }
+      &__sousTitre{
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+      }
+
+      &__tours{
+        display: flex;
+        flex-direction: row;
+        color: $blanc;
+        margin: 0 -10px;
+        &__tour{
+          width: 94px;
+          text-align: center;
+          &.t1{
+            background-color: $bleu2;
+          }
+          &.t2{
+            background-color: $bleuP;
+          }
+          &.t3{
+            background-color: $bleu4;
+          }
+          &.t4{
+            background-color: $bleu5;
+          }
+
+          &__xTour{
+            margin: 10px 0 20px 0;
+          }
+          &__dateTour{
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &__bouton{
+        margin: 20px 0;
+      }
+    }
+
+    &__question{
+      border-top: solid 5px $bleuP;
+      border-bottom: solid 5px $bleuP;
+      margin: 30px -10px 0 -10px;
+      padding: 0 10px 30px 10px;
+
+      &__titre{
+        padding-top: 20px;
+      }
+      &__p{
+        padding-top: 20px;
+        font-weight: 300;
+
+        &__span{
+          font-weight: 700;
+          color: $bleuP;
+        }
+      }
+
+      &__boutonsSylvain{
+        font-size: 18px;
+        padding-top: 15px;
+        margin-top: 20px;
+      }
+    }
+
+    &__etudiantJour{
+      margin-top: 30px;
+
+      &__info{
+
+        &__p{
+          padding-top: 20px;
+          font-weight: 300;
+
+          &__span{
+            font-weight: 700;
+            color: $bleuP;
+          }
+        }
+
+        &__boutonsBenoit{
+          font-size: 18px;
+          padding-top: 15px;
+          margin-top: 20px;
+        }
+      }
+
+      &__image{
+        border: solid 5px $orangeP;
+        margin-top: 20px;
+        margin: 20px -10px 0 -10px;
+        width: 375px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

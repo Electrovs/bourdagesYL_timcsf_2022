@@ -2,7 +2,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Rubik, sans-serif;
+}
+
+p, h2, h3 {
+  margin: 0;
+}
+
 .conteneur {
   margin: 0 auto;
   max-width: 375px;
+  padding: 0 10px;
 }

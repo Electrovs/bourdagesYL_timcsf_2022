@@ -30,6 +30,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -433,29 +434,382 @@ th {
 * @todo Utiliser le sélecteur & pour les sélecteurs des différentes couleurs
 */
 /** Polices de caractères **/
-@font-face {
-  font-family: Futura, sans-serif;
-  src: url("../fonts/Futura.ttc") format("truetype");
-}
 /** Palette de couleurs **/
 /* Couleurs de base */
-/* Autres couleurs */
 /** Points de rupture **/
 /** Mixins **/
 /****** BASE ******/
 /** Typographie **/
 /** Hyperliens **/
+a {
+  text-decoration: none;
+}
+a:hover, a:active, a:link, a:visited {
+  color: #FFFFFF;
+}
+
 /** Boutons **/
+.boutonInscrit {
+  display: block;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: #F88728;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.boutonBleu {
+  display: block;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: #004C94;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+}
+
 /****** LAYOUT ******/
 * {
   box-sizing: border-box;
 }
 
+body {
+  font-family: Rubik, sans-serif;
+}
+
+p, h2, h3 {
+  margin: 0;
+}
+
 .conteneur {
   margin: 0 auto;
   max-width: 375px;
+  padding: 0 10px;
+}
+
+.formation__top__info {
+  margin-top: 50px;
+  font-weight: 300;
+}
+.formation__top__info__p2 {
+  margin-top: 20px;
+}
+.formation__top__fichesInfo {
+  margin-top: 50px;
+}
+.formation__top__fichesInfo__titre {
+  font-size: 24px;
+}
+.formation__top__fichesInfo__fiches {
+  color: #FFFFFF;
+  margin: 20px -10px 0 -10px;
+}
+.formation__top__fichesInfo__fiches__entete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.formation__top__fichesInfo__fiches__entete__h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.formation__top__fichesInfo__fiches__entete__- {
+  font-size: 48px;
+}
+.formation__top__fichesInfo__fiches__programmation {
+  background-color: #001058;
+  padding: 10px;
+}
+.formation__top__fichesInfo__fiches__integration {
+  background-color: #002E76;
+  padding: 10px;
+}
+.formation__top__fichesInfo__fiches__conception {
+  background-color: #004C94;
+  padding: 10px;
+}
+.formation__top__fichesInfo__fiches__media {
+  background-color: #086AB2;
+  padding: 10px;
+}
+.formation__top__fichesInfo__fiches__autres {
+  background-color: #2688D0;
+  padding: 10px;
+}
+.formation__top__fichesInfo__fiches__p {
+  font-weight: 300;
+}
+.formation__top__fichesInfo__fiches__titreListe {
+  margin-top: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.formation__top__fichesInfo__fiches__listes {
+  display: flex;
+  flex-direction: row;
+}
+.formation__top__fichesInfo__fiches__liste {
+  width: 160px;
+}
+.formation__bourses {
+  color: #FFFFFF;
+  background-color: #002E76;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.formation__bourses__titre {
+  padding-top: 20px;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.formation__bourses__texte {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.formation__bourses__bouton {
+  margin-top: 30px;
+}
+.formation__bottom__grille {
+  border: solid 5px #F88728;
+  border-radius: 8px;
+  margin: 30px -10px;
+  padding: 20px 10px;
+}
+.formation__bottom__grille__p {
+  padding-top: 20px;
+  font-weight: 300;
+}
+.formation__bottom__grille__boutons__grille {
+  margin-top: 20px;
+}
+.formation__bottom__grille__boutons__p {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.formation__bottom__grille__boutons__telecharger {
+  margin-top: 20px;
+}
+.formation__bottom__temoignages {
+  margin: 0 -10px;
+}
+.formation__bottom__temoignages__temoignage {
+  background-color: #004C94;
+  color: #FFFFFF;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+.formation__bottom__temoignages__titre {
+  padding: 20px 10px 0 10px;
+  font-weight: 700;
+}
+.formation__bottom__temoignages__photoInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.formation__bottom__temoignages__photoInfo__photo {
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 178px;
+  height: 203px;
+  border-radius: 8px;
+}
+.formation__bottom__temoignages__photoInfo__photo__image {
+  border-radius: 8px;
+  border: solid 5px #FFFFFF;
+}
+.formation__bottom__temoignages__photoInfo__photo__annee {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.formation__bottom__temoignages__photoInfo__info {
+  padding: 0 20px;
+}
+.formation__bottom__temoignages__photoInfo__info__emploi {
+  padding-top: 20px;
+}
+.formation__bottom__temoignages__texte {
+  margin-top: 20px;
+}
+.formation__bottom__inscription {
+  margin-top: 20px;
+}
+.formation__bottom__inscription__info {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.formation__bottom__inscription__info__span {
+  font-weight: 700;
+  color: #004C94;
+}
+.formation__bottom__inscription__sousTitre {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.formation__bottom__inscription__tours {
+  display: flex;
+  flex-direction: row;
+  color: #FFFFFF;
+  margin: 0 -10px;
+}
+.formation__bottom__inscription__tours__tour {
+  width: 94px;
+  text-align: center;
+}
+.formation__bottom__inscription__tours__tour.t1 {
+  background-color: #086AB2;
+}
+.formation__bottom__inscription__tours__tour.t2 {
+  background-color: #004C94;
+}
+.formation__bottom__inscription__tours__tour.t3 {
+  background-color: #002E76;
+}
+.formation__bottom__inscription__tours__tour.t4 {
+  background-color: #001058;
+}
+.formation__bottom__inscription__tours__tour__xTour {
+  margin: 10px 0 20px 0;
+}
+.formation__bottom__inscription__tours__tour__dateTour {
+  margin-bottom: 10px;
+}
+.formation__bottom__inscription__bouton {
+  margin: 20px 0;
+}
+.formation__bottom__question {
+  border-top: solid 5px #004C94;
+  border-bottom: solid 5px #004C94;
+  margin: 30px -10px 0 -10px;
+  padding: 0 10px 30px 10px;
+}
+.formation__bottom__question__titre {
+  padding-top: 20px;
+}
+.formation__bottom__question__p {
+  padding-top: 20px;
+  font-weight: 300;
+}
+.formation__bottom__question__p__span {
+  font-weight: 700;
+  color: #004C94;
+}
+.formation__bottom__question__boutonsSylvain {
+  font-size: 18px;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+.formation__bottom__etudiantJour {
+  margin-top: 30px;
+}
+.formation__bottom__etudiantJour__info__p {
+  padding-top: 20px;
+  font-weight: 300;
+}
+.formation__bottom__etudiantJour__info__p__span {
+  font-weight: 700;
+  color: #004C94;
+}
+.formation__bottom__etudiantJour__info__boutonsBenoit {
+  font-size: 18px;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+.formation__bottom__etudiantJour__image {
+  border: solid 5px #F88728;
+  margin-top: 20px;
+  margin: 20px -10px 0 -10px;
+  width: 375px;
 }
 
 /****** MODULE ******/
+.footer {
+  color: #FFFFFF;
+  background-color: #004C94;
+  padding-bottom: 86px;
+  margin-top: 50px;
+}
+.footer__logo__TIM {
+  padding-top: 20px;
+  text-align: center;
+}
+.footer__logo__TIM__lien {
+  font-size: 80px;
+}
+.footer__logo__CSF {
+  margin-top: 50px;
+}
+.footer__logo__CSF__lien {
+  display: block;
+  background-image: url(../images/CSF.svg);
+  width: 167px;
+  height: 67px;
+  background-size: 167px 67px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.footer__bouton {
+  margin-top: 30px;
+}
+.footer__media {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 50px;
+}
+.footer__media__bouton {
+  width: 60px;
+  height: 60px;
+  padding: 5px 0;
+  border-radius: 8px;
+  background-color: #000000;
+}
+.footer__copyright {
+  margin-top: 100px;
+  font-weight: lighter;
+}
+.footer__copyright__small__02 {
+  margin-top: 10px;
+  display: block;
+}
+
+.header__top {
+  display: none;
+}
+.header__bandeau__blockTitre {
+  background-color: #2688D0;
+  color: #FFFFFF;
+  padding: 20px 10px;
+}
+.header__bandeau__blockTitre__titre {
+  margin: 0;
+  font-size: 18px;
+}
+.header__bandeau__blockTitre__p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.header__bandeau__image {
+  display: block;
+  background-image: url(../images/heroMobile.jpg);
+  width: 375px;
+  height: 220px;
+  background-size: 375px 220px;
+  background-repeat: no-repeat;
+}
 
 /*# sourceMappingURL=styles.css.map */

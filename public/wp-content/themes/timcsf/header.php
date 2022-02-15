@@ -13,6 +13,7 @@
     <meta name="description" content="Site Web de les TIM 2022">
     <meta name="keywords" content="HTML, CSS, JavaScript, programmation, intégration, conception, média, vidéo, animation">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/liaisons/css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <?php wp_head();?>
 </head>
 
@@ -27,11 +28,11 @@
                 </nav>
             <?php } ?>
             <a class="header__bouton boutonInscrit" href="#">Je m'inscris</a>
-            <div class="header__mobileHeader">
-                <div class="header__mobileHeader__titre">
-                    <h1 class="header__mobileHeader__titre__h1">TECHNIQUES D'INTÉGRATION MULTIMÉDIAS</h1>
-                    <p class="header__mobileHeader__titre__p">WEB & APPS</p>
-                </div>
-            </div>
+<!--            <div class="header__mobileHeader">-->
+<!--                <div class="header__mobileHeader__titre">-->
+<!--                    <h1 class="header__mobileHeader__titre__h1">TECHNIQUES D'INTÉGRATION MULTIMÉDIAS</h1>-->
+<!--                    <p class="header__mobileHeader__titre__p">WEB & APPS</p>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>

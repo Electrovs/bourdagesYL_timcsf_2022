@@ -1,3 +1,48 @@
+
+
+
+
+
+
 .header{
+
+  &__top{
+    display: none;
+  }
+
+  &__bandeau{
+
+    &__blockTitre{
+      background-color: $bleu1;
+      color: $blanc;
+      padding: 20px 10px;
+
+      &__titre{
+        margin: 0;
+        font-size: 18px;
+
+      }
+      &__p{
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    &__image{
+      display: block;
+      background-image: url(../images/heroMobile.jpg);
+      width: 375px;
+      height: 220px;
+      background-size: 375px 220px;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+
+
+
+
 
 }

@@ -9,29 +9,29 @@
 
 /** Polices de caractères **/
 
-@font-face {
-  font-family: Futura, sans-serif;
-  src: 	url('../fonts/Futura.ttc') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap');
 
-$fontePrimaire : Futura, sans-serif;
-$fonteSecondaire : Arial, sans-serif;
+$fontePrimaire : "Rubik", sans-serif;
+$fonteSecondaire : "Arial", sans-serif;
 
 /** Palette de couleurs **/
 // Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
 // Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
 
 /* Couleurs de base */
-$bleuMoyen: #358ae0;
-$bleuPale: #68a8e8;
-$vertLime: #bbd531;
-$bleuMinuit: #012d61;
-$bleuMarin: #2678B5;
+$bleu5: #001058;
+$bleu4: #002E76;
+$bleuP: #004C94;
+$bleu2: #086AB2;
+$bleu1: #2688D0;
+$orangeP: #F88728;
+$blanc: #FFFFFF;
+$noir: #000000;
 
-$bleuMoyenTransparent : transparentize($bleuMoyen, 0.50);
-
-/* Autres couleurs */
-$hyperlien: $bleuMarin;
+//$bleuMoyenTransparent : transparentize($bleuMoyen, 0.50);
+//
+///* Autres couleurs */
+//$hyperlien: $bleuMarin;
 
 /** Points de rupture **/
 $desktop : 601px;

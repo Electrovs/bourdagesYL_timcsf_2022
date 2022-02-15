@@ -1,3 +1,69 @@
-.footer{
 
+
+
+
+
+
+.footer{
+  color: $blanc;
+  background-color: $bleuP;
+  padding-bottom: 86px;
+  margin-top: 50px;
+
+  &__logo{
+    &__TIM{
+      padding-top: 20px;
+      text-align: center;
+      &__lien {
+        font-size: 80px;
+      }
+    }
+    &__CSF{
+      margin-top: 50px;
+
+      &__lien{
+        display: block;
+        background-image: url(../images/CSF.svg);
+        width: 167px;
+        height: 67px;
+        background-size: 167px 67px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+
+      }
+    }
+  }
+
+  &__bouton{
+    margin-top: 30px;
+  }
+
+  &__media{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 50px;
+
+
+    &__bouton{
+      width: 60px;
+      height: 60px;
+      padding: 5px 0;
+      border-radius: 8px;
+      background-color: $noir;
+    }
+
+  }
+
+  &__copyright{
+    margin-top: 100px;
+    font-weight: lighter;
+
+    &__small{
+
+      &__02{
+        margin-top: 10px;
+        display: block;
+      }
+    }
+  }
 }
