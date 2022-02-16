@@ -450,8 +450,10 @@ a:hover, a:active, a:link, a:visited {
 
 /** Boutons **/
 .boutonInscrit {
-  display: block;
-  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
   text-transform: uppercase;
   border-radius: 8px;
   background-color: #F88728;
@@ -459,6 +461,13 @@ a:hover, a:active, a:link, a:visited {
   height: 50px;
   text-align: center;
   padding: 10px 0;
+}
+@media (min-width: 840px) {
+  .boutonInscrit {
+    width: 235px;
+    height: 40px;
+    padding: 5px 0;
+  }
 }
 
 .boutonBleu {
@@ -491,10 +500,29 @@ p, h2, h3 {
   max-width: 375px;
   padding: 0 10px;
 }
+@media (min-width: 840px) {
+  .conteneur {
+    max-width: 1000px;
+  }
+}
+
+.texteAlignRight {
+  text-align: right;
+}
 
 .formation__top__info {
   margin-top: 50px;
   font-weight: 300;
+  font-size: 18px;
+}
+@media (min-width: 840px) {
+  .formation__top__info {
+    max-width: 660px;
+    margin: 50px auto 0 auto;
+  }
+}
+.formation__top__info__p1__span {
+  font-weight: 500;
 }
 .formation__top__info__p2 {
   margin-top: 20px;
@@ -509,40 +537,50 @@ p, h2, h3 {
   color: #FFFFFF;
   margin: 20px -10px 0 -10px;
 }
+@media (min-width: 840px) {
+  .formation__top__fichesInfo__fiches {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .formation__top__fichesInfo__fiches__entete {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 840px) {
+  .formation__top__fichesInfo__fiches__entete {
+    justify-content: center;
+  }
+}
 .formation__top__fichesInfo__fiches__entete__h2 {
   font-size: 24px;
   text-transform: uppercase;
   padding-left: 5px;
 }
+@media (min-width: 840px) {
+  .formation__top__fichesInfo__fiches__entete__h2 {
+    padding-bottom: 20px;
+  }
+}
 .formation__top__fichesInfo__fiches__entete__- {
   font-size: 48px;
   padding-right: 20px;
 }
-.formation__top__fichesInfo__fiches__programmation {
-  background-color: #001058;
+@media (min-width: 840px) {
+  .formation__top__fichesInfo__fiches__entete__- {
+    display: none;
+  }
+}
+.formation__top__fichesInfo__fiches__fiche {
   padding: 10px;
 }
-.formation__top__fichesInfo__fiches__integration {
-  background-color: #002E76;
-  padding: 10px;
-}
-.formation__top__fichesInfo__fiches__conception {
-  background-color: #004C94;
-  padding: 10px;
-}
-.formation__top__fichesInfo__fiches__media {
-  background-color: #086AB2;
-  padding: 10px;
-}
-.formation__top__fichesInfo__fiches__autres {
-  background-color: #2688D0;
-  padding: 10px;
+@media (min-width: 1000px) {
+  .formation__top__fichesInfo__fiches__fiche {
+    width: 500px;
+  }
 }
 .formation__top__fichesInfo__fiches__p {
   font-weight: 300;
@@ -570,6 +608,11 @@ p, h2, h3 {
   font-size: 32px;
   text-transform: uppercase;
   text-align: center;
+}
+@media (min-width: 840px) {
+  .formation__bourses__titre {
+    font-size: 60px;
+  }
 }
 .formation__bourses__texte {
   font-size: 18px;
@@ -740,6 +783,26 @@ p, h2, h3 {
   width: 375px;
 }
 
+.programmation {
+  background-color: #001058;
+}
+
+.integration {
+  background-color: #002E76;
+}
+
+.conception {
+  background-color: #004C94;
+}
+
+.media {
+  background-color: #086AB2;
+}
+
+.autres {
+  background-color: #2688D0;
+}
+
 .contact__titre {
   text-transform: uppercase;
   font-size: 32px;
@@ -890,12 +953,32 @@ p, h2, h3 {
 }
 
 .header__top {
+  background-color: #2688D0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.header__top__logo {
+  font-size: 80px;
+}
+.header__bandeau {
+  position: relative;
   background-color: black;
 }
 .header__bandeau__blockTitre {
   background-color: #2688D0;
   color: #FFFFFF;
   padding: 20px 10px;
+}
+@media (min-width: 840px) {
+  .header__bandeau__blockTitre {
+    background-color: transparent;
+    position: absolute;
+    z-index: 99;
+    top: 25%;
+    width: 100%;
+    padding-left: 15%;
+  }
 }
 .header__bandeau__blockTitre__titre {
   margin: 0;
@@ -908,11 +991,39 @@ p, h2, h3 {
 }
 .header__bandeau__image {
   display: block;
-  background-image: url(../images/heroMobile.jpg);
-  width: 375px;
-  height: 220px;
-  background-size: 375px 220px;
+  width: 100%;
+  height: auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+}
+@media (min-width: 840px) {
+  .header__bandeau__image {
+    opacity: 0.4;
+  }
+}
+
+.conteneurHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30rem;
+  padding: 0;
+}
+@media (max-width: 840px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-item {
+  list-style: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

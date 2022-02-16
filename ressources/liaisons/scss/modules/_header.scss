@@ -7,15 +7,35 @@
 .header{
 
   &__top{
-    background-color: black;
+    background-color: $bleu1;
+    height: 120px;
+    display: flex;
+    align-items: center;
+
+    &__logo{
+      font-size: 80px;
+    }
   }
 
+
+
   &__bandeau{
+    position: relative;
+    background-color: black;
+
 
     &__blockTitre{
       background-color: $bleu1;
       color: $blanc;
       padding: 20px 10px;
+      @media (min-width: $desktop) {
+        background-color: transparent;
+        position: absolute;
+        z-index: 99;
+        top: 25%;
+        width: 100%;
+        padding-left: 15%;
+      }
 
       &__titre{
         margin: 0;
@@ -31,18 +51,22 @@
 
     &__image{
       display: block;
-      background-image: url(../images/heroMobile.jpg);
-      width: 375px;
-      height: 220px;
-      background-size: 375px 220px;
+      width: 100%;
+      height: auto;
+      background-size: 100% auto;
       background-repeat: no-repeat;
+      @media (min-width: $desktop) {
+        opacity: 0.4;
+      }
     }
 
   }
+}
 
-
-
-
-
+.conteneurHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
 }

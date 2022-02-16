@@ -14,4 +14,11 @@ p, h2, h3 {
   margin: 0 auto;
   max-width: 375px;
   padding: 0 10px;
+  @media (min-width: $desktop) {
+    max-width: 1000px;
+  }
+}
+
+.texteAlignRight{
+  text-align: right;
 }

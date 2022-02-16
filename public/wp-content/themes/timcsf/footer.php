@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="conteneur">
+    <div class="conteneur conteneurFooter">
         <div class="footer__logo__TIM"><a href="<?php echo get_permalink(14)?>" class="footer__logo__TIM__lien">{TIM}</a></div>
         <a class="footer__bouton boutonInscrit" href="<?php echo get_post(125)->texte?>"><?php echo get_post(470)->titre?></a>
         <div class="footer__media">
@@ -17,7 +17,6 @@
 </footer>
 <?php wp_footer();?>
 
-<script src="<?php echo get_template_directory_uri();?>/liaisons/js/menu.js"></script>
 
 </body>
 </html>
