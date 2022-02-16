@@ -168,7 +168,7 @@
                 t’offre 1 500 $ de bourses par session inscrit, pour un total de 9 000 $
                 pour les 3 années du programme TIM.
             </p>
-            <div class="texteAlignRight">
+            <div class="formation__bourses__bouton__alignRight">
                 <a class="formation__bourses__bouton boutonInscrit" href="#">Renseigne toi ici</a>
             </div>
         </div>
@@ -176,15 +176,17 @@
     <div class="formation__bottom">
         <div class="conteneur">
             <div class="formation__bottom__grille">
-                <h2 class="formation__bottom__grille__h2">Grille de cours</h2>
-                <p class="formation__bottom__grille__p">
-                    Pour avoir de l’information plus spécifique sur
-                    les cours, visite le site du Cégep de Sainte-Foy.
-                </p>
-                <div class="formation__bottom__grille__boutons">
-                    <a class="formation__bottom__grille__boutons__grille boutonBleu" href="#">Grille de cours</a>
-                    <p class="formation__bottom__grille__boutons__p">Ou</p>
-                    <a class="formation__bottom__grille__boutons__telecharger boutonBleu" href="#">Télécharger</a>
+                <div>
+                    <h2 class="formation__bottom__grille__h2">Grille de cours</h2>
+                    <p class="formation__bottom__grille__p">
+                        Pour avoir de l’information plus spécifique sur
+                        les cours, visite le site du Cégep de Sainte-Foy.
+                    </p>
+                    <div class="formation__bottom__grille__boutons">
+                        <a class="formation__bottom__grille__boutons__grille boutonBleu" href="#">Grille de cours</a>
+                        <p class="formation__bottom__grille__boutons__p">Ou</p>
+                        <a class="formation__bottom__grille__boutons__telecharger boutonBleu" href="#">Télécharger</a>
+                    </div>
                 </div>
             </div>
             <div class="formation__bottom__temoignages">
@@ -279,43 +281,94 @@
                         </div>
                     <?php }
                 } ?>
+                <?php
+                //à mettre dans la page pour afficher les responsables
+                //**************************************************
+
+
+
+                //Requête pour obtenir les infos des responsables
+                $args = array(
+                    'post_type' => 'témoignages',
+                    'posts_per_page' => 1,
+                    'post_status' => 'publish',
+                    'orderby' => 'rand',
+                    'order' => 'ASC',
+                );
+
+                $the_query = new WP_Query( $args );
+
+                if($the_query->have_posts()){
+                    while($the_query->have_posts()) {
+                        $the_query->the_post();?>
+                        <?php //Photo obtient un tableau (sizes) contenant les différentes tailles d'image
+                        $photo=get_field("photo");
+                        //ici on affiche seulement la taille thumbnail
+                        ?>
+                        <div class="formation__bottom__temoignages__temoignage">
+                            <div class="formation__bottom__temoignages__photoInfo">
+                                <div class="formation__bottom__temoignages__photoInfo__photo">
+                                    <img
+                                            class="formation__bottom__temoignages__photoInfo__photo__image"
+                                            src="<?php echo $photo["sizes"]["large"]; ?>"
+                                            alt="photo de du témoin"
+                                    >
+                                    <p class="formation__bottom__temoignages__photoInfo__photo__annee">Diplomé.e <?php echo get_field("annee_diplomation");?></p>
+                                </div>
+                                <div class="formation__bottom__temoignages__photoInfo__info">
+                                    <p class="formation__bottom__temoignages__photoInfo__info__nom"><?php echo get_field("temoin");?></p>
+                                    <p class="formation__bottom__temoignages__photoInfo__info__emploi"><?php echo get_field("titre_poste");?></p>
+                                </div>
+                            </div>
+                            <p class="formation__bottom__temoignages__texte">
+                                <?php echo get_field("temoignage");?>
+                            </p>
+                        </div>
+                    <?php }
+                } ?>
             </div>
             <div class="formation__bottom__inscription">
-                <h2 class="formation__bottom__inscription__titre">Inscription</h2>
-                <p class="formation__bottom__inscription__info">
-                    Pour compléter ta demande d'admission à notre programme, tu dois t'adresser au Service régional d'admission au collégial
-                    de Québec <span class="formation__bottom__inscription__info__span">(SRACQ).</span>
-                </p>
-                <h3 class="formation__bottom__inscription__sousTitre">Périodes d'inscription</h3>
-                <div class="formation__bottom__inscription__tours">
-                    <div class="formation__bottom__inscription__tours__tour t1">
-                        <p class="formation__bottom__inscription__tours__tour__xTour">1er tour</p>
-                        <p class="formation__bottom__inscription__tours__tour__dateTour">1e mars</p>
+                <div class="formation__bottom__inscription__flex">
+                    <h2 class="formation__bottom__inscription__titre">Inscription</h2>
+                    <p class="formation__bottom__inscription__info">
+                        Pour compléter ta demande d'admission à notre programme, tu dois t'adresser au Service régional d'admission au collégial
+                        de Québec <span class="formation__bottom__inscription__info__span">(SRACQ).</span>
+                    </p>
+                    <h3 class="formation__bottom__inscription__sousTitre">Périodes d'inscription</h3>
+                    <div class="formation__bottom__inscription__tours">
+                        <div class="formation__bottom__inscription__tours__tour t1">
+                            <p class="formation__bottom__inscription__tours__tour__xTour">1er tour</p>
+                            <p class="formation__bottom__inscription__tours__tour__dateTour">1e mars</p>
+                        </div>
+                        <div class="formation__bottom__inscription__tours__tour t2">
+                            <p class="formation__bottom__inscription__tours__tour__xTour">2e tour</p>
+                            <p class="formation__bottom__inscription__tours__tour__dateTour">1e mai</p>
+                        </div>
+                        <div class="formation__bottom__inscription__tours__tour t3">
+                            <p class="formation__bottom__inscription__tours__tour__xTour">3e tour</p>
+                            <p class="formation__bottom__inscription__tours__tour__dateTour">1e juin</p>
+                        </div>
+                        <div class="formation__bottom__inscription__tours__tour t4">
+                            <p class="formation__bottom__inscription__tours__tour__xTour">4e tour</p>
+                            <p class="formation__bottom__inscription__tours__tour__dateTour">1e août</p>
+                        </div>
                     </div>
-                    <div class="formation__bottom__inscription__tours__tour t2">
-                        <p class="formation__bottom__inscription__tours__tour__xTour">2e tour</p>
-                        <p class="formation__bottom__inscription__tours__tour__dateTour">1e mai</p>
-                    </div>
-                    <div class="formation__bottom__inscription__tours__tour t3">
-                        <p class="formation__bottom__inscription__tours__tour__xTour">3e tour</p>
-                        <p class="formation__bottom__inscription__tours__tour__dateTour">1e juin</p>
-                    </div>
-                    <div class="formation__bottom__inscription__tours__tour t4">
-                        <p class="formation__bottom__inscription__tours__tour__xTour">4e tour</p>
-                        <p class="formation__bottom__inscription__tours__tour__dateTour">1e août</p>
+                    <div class="formation__bottom__inscription__bouton__alignRight">
+                        <a class="formation__bottom__inscription__bouton boutonInscrit" href="#">Je m'inscris</a>
                     </div>
                 </div>
-                <a class="formation__bottom__inscription__bouton boutonInscrit" href="#">Je m'inscris</a>
             </div>
             <div class="formation__bottom__question">
-                <h2 class="formation__bottom__question__titre">Questions</h2>
-                <p class="formation__bottom__question__p">
-                    Tu as des questions et aimerais en apprendre plus sur notre programme ?
-                </p>
-                <p class="formation__bottom__question__p">
-                    N’hésite pas à contacter <span class="formation__bottom__question__p__span">Sylvain Lamoureux</span>, le coordonnateur du programme, pour obtenir des réponses.
-                </p>
-                <a class="formation__bottom__question__boutonsSylvain boutonBleu" href="#">Écris à Sylvain Lamoureux</a>
+                <div>
+                    <h2 class="formation__bottom__question__titre">Questions</h2>
+                    <p class="formation__bottom__question__p">
+                        Tu as des questions et aimerais en apprendre plus sur notre programme ?
+                    </p>
+                    <p class="formation__bottom__question__p">
+                        N’hésite pas à contacter <span class="formation__bottom__question__p__span">Sylvain Lamoureux</span>, le coordonnateur du programme, pour obtenir des réponses.
+                    </p>
+                    <a class="formation__bottom__question__boutonsSylvain boutonBleu" href="#">Écris à Sylvain Lamoureux</a>
+                </div>
             </div>
             <div class="formation__bottom__etudiantJour">
                 <div class="formation__bottom__etudiantJour__info">

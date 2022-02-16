@@ -503,11 +503,8 @@ p, h2, h3 {
 @media (min-width: 840px) {
   .conteneur {
     max-width: 1000px;
+    position: relative;
   }
-}
-
-.texteAlignRight {
-  text-align: right;
 }
 
 .formation__top__info {
@@ -622,11 +619,23 @@ p, h2, h3 {
 .formation__bourses__bouton {
   margin-top: 30px;
 }
+@media (min-width: 840px) {
+  .formation__bourses__bouton__alignRight {
+    text-align: right;
+  }
+}
 .formation__bottom__grille {
   border: solid 5px #F88728;
   border-radius: 8px;
   margin: 30px -10px;
   padding: 20px 10px;
+}
+@media (min-width: 840px) {
+  .formation__bottom__grille {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+  }
 }
 .formation__bottom__grille__p {
   padding-top: 20px;
@@ -648,15 +657,33 @@ p, h2, h3 {
 .formation__bottom__temoignages {
   margin: 0 -10px;
 }
+@media (min-width: 840px) {
+  .formation__bottom__temoignages {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+  }
+}
 .formation__bottom__temoignages__temoignage {
   background-color: #004C94;
   color: #FFFFFF;
   padding: 20px 10px;
   margin-top: 20px;
 }
+@media (min-width: 840px) {
+  .formation__bottom__temoignages__temoignage {
+    border-radius: 8px;
+  }
+}
 .formation__bottom__temoignages__titre {
   padding: 20px 10px 0 10px;
   font-weight: 700;
+}
+@media (min-width: 840px) {
+  .formation__bottom__temoignages__titre {
+    padding-top: 0;
+  }
 }
 .formation__bottom__temoignages__photoInfo {
   display: flex;
@@ -684,6 +711,12 @@ p, h2, h3 {
 .formation__bottom__temoignages__photoInfo__info {
   padding: 0 20px;
 }
+@media (min-width: 840px) {
+  .formation__bottom__temoignages__photoInfo__info {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
 .formation__bottom__temoignages__photoInfo__info__emploi {
   padding-top: 20px;
 }
@@ -692,6 +725,13 @@ p, h2, h3 {
 }
 .formation__bottom__inscription {
   margin-top: 20px;
+}
+@media (min-width: 840px) {
+  .formation__bottom__inscription {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+  }
 }
 .formation__bottom__inscription__info {
   margin-top: 20px;
@@ -713,9 +753,20 @@ p, h2, h3 {
   color: #FFFFFF;
   margin: 0 -10px;
 }
+@media (min-width: 840px) {
+  .formation__bottom__inscription__tours {
+    margin: 0;
+    justify-content: center;
+  }
+}
 .formation__bottom__inscription__tours__tour {
   width: 94px;
   text-align: center;
+}
+@media (min-width: 840px) {
+  .formation__bottom__inscription__tours__tour {
+    width: 100%;
+  }
 }
 .formation__bottom__inscription__tours__tour.t1 {
   background-color: #086AB2;
@@ -738,11 +789,23 @@ p, h2, h3 {
 .formation__bottom__inscription__bouton {
   margin: 20px 0;
 }
+@media (min-width: 840px) {
+  .formation__bottom__inscription__bouton__alignRight {
+    text-align: right;
+  }
+}
 .formation__bottom__question {
   border-top: solid 5px #004C94;
   border-bottom: solid 5px #004C94;
   margin: 30px -10px 0 -10px;
   padding: 0 10px 30px 10px;
+}
+@media (min-width: 840px) {
+  .formation__bottom__question {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+  }
 }
 .formation__bottom__question__titre {
   padding-top: 20px;
@@ -763,6 +826,13 @@ p, h2, h3 {
 .formation__bottom__etudiantJour {
   margin-top: 30px;
 }
+@media (min-width: 840px) {
+  .formation__bottom__etudiantJour {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+  }
+}
 .formation__bottom__etudiantJour__info__p {
   padding-top: 20px;
   font-weight: 300;
@@ -781,6 +851,11 @@ p, h2, h3 {
   margin-top: 20px;
   margin: 20px -10px 0 -10px;
   width: 375px;
+}
+@media (min-width: 840px) {
+  .formation__bottom__etudiantJour__image {
+    width: 100%;
+  }
 }
 
 .programmation {
@@ -811,6 +886,11 @@ p, h2, h3 {
 .contact__responsables {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 840px) {
+  .contact__responsables {
+    flex-direction: row;
+  }
 }
 .contact__responsables__responsable {
   border-radius: 8px;
@@ -853,10 +933,21 @@ p, h2, h3 {
   background-color: #F0F0F0;
   padding: 0 10px;
 }
+@media (min-width: 840px) {
+  .contact__formulaire {
+    width: 660px;
+    margin: 50px auto 0 auto;
+  }
+}
 .contact__formulaire__groupInput {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 840px) {
+  .contact__formulaire__groupInput {
+    width: 386px;
+  }
 }
 .contact__formulaire__label {
   font-size: 16px;
@@ -901,6 +992,11 @@ p, h2, h3 {
   color: #FFFFFF;
   margin: 30px 0;
 }
+@media (min-width: 840px) {
+  .contact__formulaire__bouton {
+    width: 300px;
+  }
+}
 
 /****** MODULE ******/
 .footer {
@@ -908,6 +1004,28 @@ p, h2, h3 {
   background-color: #004C94;
   padding-bottom: 86px;
   margin-top: 50px;
+}
+@media (min-width: 840px) {
+  .footer {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 840px) {
+  .footer__flex__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 840px) {
+  .footer__flex__bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
 }
 .footer__logo__TIM {
   padding-top: 20px;
@@ -952,14 +1070,48 @@ p, h2, h3 {
   display: block;
 }
 
+.header {
+  position: relative;
+  width: 100vw;
+}
 .header__top {
   background-color: #2688D0;
-  height: 120px;
+  height: 70px;
+  width: 100%;
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 5px;
+}
+@media (min-width: 840px) {
+  .header__top {
+    position: static;
+    height: 120px;
+  }
 }
 .header__top__logo {
-  font-size: 80px;
+  font-size: 60px;
+}
+@media (min-width: 840px) {
+  .header__top__logo {
+    font-size: 80px;
+  }
+}
+.header__top__bouton {
+  display: none;
+}
+@media (min-width: 840px) {
+  .header__top__bouton {
+    display: block;
+  }
+}
+.header__navigation {
+  display: none;
+}
+@media (min-width: 840px) {
+  .header__navigation {
+    display: block;
+  }
 }
 .header__bandeau {
   position: relative;
@@ -1007,19 +1159,24 @@ p, h2, h3 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 0 10px;
+}
+@media (min-width: 840px) {
+  .conteneurHeader {
+    max-width: 1000px;
+  }
 }
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 30rem;
-  padding: 0;
-}
-@media (max-width: 840px) {
+@media (min-width: 840px) {
   .menu {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30rem;
+    padding: 0;
   }
 }
 .menu-item {

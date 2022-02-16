@@ -5,15 +5,43 @@
 
 
 .header{
+  position: relative;
+  width: 100vw;
 
   &__top{
     background-color: $bleu1;
-    height: 120px;
+    height: 70px;
+    width: 100%;
     display: flex;
     align-items: center;
+    position: fixed;
+    bottom: 5px;
+    @media (min-width: $desktop) {
+      position: static;
+      height: 120px;
+    }
 
-    &__logo{
-      font-size: 80px;
+
+
+      &__logo{
+      font-size: 60px;
+        @media (min-width: $desktop) {
+          font-size: 80px;
+        }
+      }
+
+    &__bouton{
+      display: none;
+      @media (min-width: $desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__navigation{
+    display: none;
+    @media (min-width: $desktop) {
+      display: block;
     }
   }
 
@@ -68,5 +96,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 0 10px;
+  @media (min-width: $desktop) {
+    max-width: 1000px;
+  }
 
 }

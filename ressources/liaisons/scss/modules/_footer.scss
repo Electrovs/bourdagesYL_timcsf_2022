@@ -9,6 +9,30 @@
   background-color: $bleuP;
   padding-bottom: 86px;
   margin-top: 50px;
+  @media (min-width: $desktop) {
+    padding-bottom: 20px;
+  }
+    &__flex{
+
+    &__top{
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+
+    &__bottom{
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+    }
+  }
 
   &__logo{
     &__TIM{

@@ -20,13 +20,13 @@
 <body>
 <header class="header">
     <div class="header__top">
-        <div class="conteneur conteneurHeader">
+        <div class="conteneurHeader">
             <div class="header__top__logo"><a href="http://localhost/timcsf_2022/public/" class="header__top__logo__lien">{TIM}</a></div>
             <?php if(has_nav_menu("principal")){?>
                 <nav class="header__navigation">
                     <?php wp_nav_menu(array("theme_location"=>"principal"));?>
                 </nav>
             <?php } ?>
-            <a class="header__bouton boutonInscrit" href="#">Je m'inscris</a>
+            <a class="header__top__bouton boutonInscrit" href="#">Je m'inscris</a>
         </div>
     </div>

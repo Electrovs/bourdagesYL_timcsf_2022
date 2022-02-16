@@ -115,7 +115,7 @@
       font-size: 32px;
       text-transform: uppercase;
       text-align: center;
-      @media (min-width: $desktop) {
+      @media (min-width: $desktop){
         font-size: 60px;
       }
     }
@@ -125,9 +125,13 @@
       font-weight: 300;
       margin-top: 20px;
     }
-
     &__bouton {
       margin-top: 30px;
+      &__alignRight{
+        @media (min-width: $desktop){
+          text-align: right;
+        }
+      }
     }
   }
 
@@ -138,8 +142,13 @@
       border-radius: 8px;
       margin: 30px -10px;
       padding: 20px 10px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
 
-      &__p{
+        &__p{
         padding-top: 20px;
         font-weight: 300;
       }
@@ -163,17 +172,30 @@
 
     &__temoignages{
       margin: 0 -10px;
+      @media (min-width: $desktop) {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+      }
 
-      &__temoignage{
+
+        &__temoignage{
         background-color: $bleuP;
         color: $blanc;
         padding: 20px 10px;
         margin-top: 20px;
+        @media (min-width: $desktop) {
+          border-radius: 8px;
+        }
       }
 
       &__titre{
         padding: 20px 10px 0 10px;
         font-weight: 700;
+        @media (min-width: $desktop) {
+          padding-top: 0;
+        }
       }
 
       &__photoInfo{
@@ -204,8 +226,14 @@
 
         &__info{
           padding: 0 20px;
+          @media (min-width: $desktop) {
+            font-size: 24px;
+            font-weight: 700;
+          }
 
-          &__emploi{
+
+
+            &__emploi{
             padding-top: 20px;
           }
         }
@@ -218,6 +246,11 @@
 
     &__inscription{
       margin-top: 20px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
 
       &__info{
         margin-top: 20px;
@@ -240,9 +273,16 @@
         flex-direction: row;
         color: $blanc;
         margin: 0 -10px;
+        @media (min-width: $desktop) {
+          margin: 0;
+          justify-content: center;
+        }
         &__tour{
           width: 94px;
           text-align: center;
+          @media (min-width: $desktop) {
+            width: 100%;
+          }
           &.t1{
             background-color: $bleu2;
           }
@@ -267,6 +307,11 @@
 
       &__bouton{
         margin: 20px 0;
+        &__alignRight{
+          @media (min-width: $desktop){
+            text-align: right;
+          }
+        }
       }
     }
 
@@ -275,6 +320,11 @@
       border-bottom: solid 5px $bleuP;
       margin: 30px -10px 0 -10px;
       padding: 0 10px 30px 10px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
 
       &__titre{
         padding-top: 20px;
@@ -298,6 +348,12 @@
 
     &__etudiantJour{
       margin-top: 30px;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
 
       &__info{
 
@@ -323,7 +379,11 @@
         margin-top: 20px;
         margin: 20px -10px 0 -10px;
         width: 375px;
-      }
+        @media (min-width: $desktop) {
+          width: 100%;
+        }
+
+        }
     }
   }
 }
