@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="conteneur conteneurFooter">
         <div class="footer__flex__top">
-            <div class="footer__logo__TIM"><a href="<?php echo get_permalink(14)?>" class="footer__logo__TIM__lien">{TIM}</a></div>
+            <div class="footer__logo__TIM"><a href="<?php echo get_permalink(14)?>" class="footer__logo__TIM__lien"><?php echo get_post(476)->titre?></a></div>
             <a class="footer__bouton boutonInscrit" href="<?php echo get_post(125)->texte?>"><?php echo get_post(470)->titre?></a>
             <div class="footer__media">
                 <a href="<?php echo get_post(126)->texte?>" class="footer__media__bouton fa fa-facebook"></a>

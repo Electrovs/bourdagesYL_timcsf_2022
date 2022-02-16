@@ -121,12 +121,4 @@
     </div>
 </main>
 
-
-<?php
-if(is_active_sidebar("droite")){?>
-    <aside id="droite" class="barredroite">
-        <?php get_sidebar("droite")?>
-    </aside>
-<?php } ?>
-
 <?php get_footer(); ?>
