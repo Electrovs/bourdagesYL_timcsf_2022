@@ -20,7 +20,7 @@
         <div class="conteneurHeader">
             <div class="header__top__logo"><a href="<?php echo get_permalink(14)?>" class="header__top__logo__lien"><?php echo get_post(476)->titre?></a></div>
             <?php if(has_nav_menu("principal")){?>
-                <nav class="header__navigation">
+                <nav class="navigation">
                     <?php wp_nav_menu(array("theme_location"=>"principal"));?>
                 </nav>
             <?php } ?>

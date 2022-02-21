@@ -1075,13 +1075,13 @@ p, h2, h3 {
   width: 100vw;
 }
 .header__top {
-  background-color: #2688D0;
+  background-color: #004C94;
   height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: 5px;
+  bottom: 0;
 }
 @media (min-width: 840px) {
   .header__top {
@@ -1102,14 +1102,6 @@ p, h2, h3 {
 }
 @media (min-width: 840px) {
   .header__top__bouton {
-    display: block;
-  }
-}
-.header__navigation {
-  display: none;
-}
-@media (min-width: 840px) {
-  .header__navigation {
     display: block;
   }
 }
@@ -1157,11 +1149,12 @@ p, h2, h3 {
 .conteneurHeader {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   width: 100vw;
   padding: 0 10px;
+  position: relative;
 }
 @media (min-width: 840px) {
   .conteneurHeader {
@@ -1169,18 +1162,110 @@ p, h2, h3 {
   }
 }
 
+/* Bouton du menu (injecté par JavaScript)*/
+.navigation {
+  max-width: 960px;
+  margin: 0;
+  order: 2;
+}
+.navigation__controle {
+  background-color: #004C94;
+  color: #FFFFFF;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px;
+  min-width: 40px;
+}
+.navigation__controle:hover {
+  background-color: #004C94;
+  border: 2px solid #FFFFFF;
+}
+.navigation__controle:active {
+  border: 2px solid #FFFFFF;
+  background-color: #004C94;
+}
+.navigation__controle:focus {
+  /**
+   * Les styles du navigateur utilisent la règle outline pour définir
+   * l'état focus des éléments interactifs.
+   * Vous pouvez redéfinir cette règle ou remplacer par d'autres styles
+   * mieux adaptés à la direction visuelle.
+   * MAIS il faut souligner l'état focus et le tester au clavier.
+   */
+  outline: #FFFFFF auto 5px;
+}
 @media (min-width: 840px) {
-  .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 30rem;
-    padding: 0;
+  .navigation__controle {
+    display: none;
   }
 }
+
 .menu-item {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Liens du menu */
+.menu-item a {
+  background-color: #2688D0;
+  display: block;
+  padding: 15px 10px;
+  width: 100%;
+  /*     outline: none;
+       border-left: 5px solid #f5ae09;*/
+}
+.menu-item a:link, .menu-item a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.menu-item a:active, .menu-item a:hover {
+  text-decoration: underline;
+}
+.menu-item a--actif {
+  border-left: 5px solid #f4d07c;
+  text-decoration: underline;
+}
+
+/* Liste du menu */
+.menu {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  max-height: none;
+}
+
+@media (min-width: 840px) {
+  .menu-item {
+    display: inline-block;
+  }
+}
+
+/* Si le javascript est activé */
+/* Pour des raisons d'accessibilité, on ne cache le menu mobile
+ * que si JavaScript est activé. De cette façon, s'il est désactivé,
+ * le menu restera tout de même visible à l'utilisateur.
+ */
+.js .menu {
+  max-height: 100vh;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.js .navigation--ferme .menu {
+  max-height: 0;
+}
+@media (min-width: 840px) {
+  .js .navigation--ferme .menu {
+    max-height: none;
+  }
+}
+
+.menu-menu-1-container {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
