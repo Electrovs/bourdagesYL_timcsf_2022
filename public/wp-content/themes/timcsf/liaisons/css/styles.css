@@ -509,7 +509,7 @@ body {
   font-family: Rubik, sans-serif;
 }
 
-p, h2, h3 {
+p, h1, h2, h3 {
   margin: 0;
 }
 
@@ -909,6 +909,7 @@ p, h2, h3 {
   text-transform: uppercase;
   font-size: 32px;
   text-align: center;
+  margin: 30px 0;
 }
 .contact__responsables {
   display: flex;
@@ -1028,6 +1029,177 @@ p, h2, h3 {
 @media (min-width: 940px) {
   .horsAccueil {
     display: none;
+  }
+}
+
+.stages__titre {
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .stages__titre {
+    margin-top: 50px;
+  }
+}
+.stages__texteIntro {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .stages__texteIntro {
+    margin-top: 50px;
+  }
+}
+.stages__stagesInfo {
+  margin: 30px -10px 0 -10px;
+  color: #FFFFFF;
+}
+@media (min-width: 940px) {
+  .stages__stagesInfo {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.stages__stagesInfo__stageATE {
+  background-color: #002E76;
+  padding: 20px 10px;
+}
+@media (min-width: 940px) {
+  .stages__stagesInfo__stageATE {
+    flex-basis: 48%;
+  }
+}
+.stages__stagesInfo__stageATE__titre {
+  font-size: 24px;
+}
+.stages__stagesInfo__stageATE__texte {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.stages__stagesInfo__stageATE__dureeDate {
+  background-color: #2688D0;
+  margin: 20px -10px 0 -10px;
+  padding: 20px 10px;
+}
+@media (min-width: 940px) {
+  .stages__stagesInfo__stageATE__dureeDate {
+    margin-top: 58px;
+  }
+}
+.stages__stagesInfo__stageATE__date {
+  font-size: 24px;
+}
+.stages__stagesInfo__stageATE__date__span {
+  font-weight: 300;
+}
+.stages__stagesInfo__stageATE__duree {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.stages__stagesInfo__stageATE__duree__span {
+  font-weight: 300;
+}
+.stages__stagesInfo__stageFE {
+  background-color: #002E76;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+@media (min-width: 940px) {
+  .stages__stagesInfo__stageFE {
+    margin-top: 0;
+    flex-basis: 48%;
+  }
+}
+.stages__stagesInfo__stageFE__titre {
+  font-size: 24px;
+}
+.stages__stagesInfo__stageFE__texte {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.stages__stagesInfo__stageFE__dureeDate {
+  background-color: #2688D0;
+  margin: 20px -10px 0 -10px;
+  padding: 20px 10px;
+}
+.stages__stagesInfo__stageFE__date {
+  font-size: 24px;
+}
+.stages__stagesInfo__stageFE__date__span {
+  font-weight: 300;
+}
+.stages__stagesInfo__stageFE__duree {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.stages__stagesInfo__stageFE__duree__span {
+  font-weight: 300;
+}
+.stages__employeurs {
+  font-weight: 500;
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .stages__employeurs {
+    max-width: 660px;
+    margin: 30px auto 0 auto;
+  }
+}
+.stages__employeurs__texte {
+  margin-top: 20px;
+}
+.stages__employeurs__texte__02 {
+  margin-top: 10px;
+}
+.stages__employeurs__texte__span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #004C94;
+}
+.stages__contactezPascal {
+  margin: 30px -10px 0 -10px;
+  border: 5px solid #F88728;
+  padding: 20px 10px;
+}
+@media (min-width: 940px) {
+  .stages__contactezPascal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 940px) {
+  .stages__contactezPascal__infos {
+    margin-left: 30px;
+  }
+}
+.stages__contactezPascal__infos__texte {
+  font-size: 18px;
+}
+.stages__contactezPascal__infos__telephone {
+  font-weight: 300;
+  margin-top: 20px;
+}
+.stages__contactezPascal__infos__telephone__span {
+  font-weight: 700;
+  color: #004C94;
+}
+.stages__contactezPascal__boutonPascal {
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .stages__contactezPascal__boutonPascal {
+    flex-basis: 40%;
+    margin-top: 0;
+    margin-right: 30px;
   }
 }
 
