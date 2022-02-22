@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<a name="top"></a>
 <header class="header">
     <div class="header__top">
         <div class="conteneurHeader">

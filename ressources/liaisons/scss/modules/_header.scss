@@ -19,6 +19,7 @@
     @media (min-width: $desktop) {
       position: static;
       height: 120px;
+      justify-content: space-between;
     }
 
 
@@ -59,12 +60,18 @@
       &__titre{
         margin: 0;
         font-size: 18px;
+        @media (min-width: $desktop) {
+          font-size: 32px;
+        }
 
       }
       &__p{
         margin: 0;
         font-size: 18px;
         font-weight: 300;
+        @media (min-width: $desktop) {
+          font-size: 32px;
+        }
       }
     }
 

@@ -118,6 +118,9 @@
             <div class="contact__forrmulaire__captcha">Captcha</div>
             <button class="contact__formulaire__bouton boutonBleu" type="submit">Envoyer</button>
         </form>
+        <div class="boutonHautPage">
+            <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
+        </div>
     </div>
 </main>
 

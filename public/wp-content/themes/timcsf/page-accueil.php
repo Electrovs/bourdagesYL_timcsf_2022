@@ -262,6 +262,9 @@
                     >
                 </div>
             </div>
+            <div class="boutonHautPage">
+                <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
+            </div>
         </div>
     </div>
 </main>

@@ -26,7 +26,10 @@
   max-width: 960px;
   margin: 0;
   order: 2;
-  &__controle {
+  @media (min-width: $desktop) {
+    order: inherit;
+  }
+    &__controle {
     background-color: $bleuP;
     color: $blanc;
     border: none;
@@ -70,8 +73,11 @@
   display: block;
   padding: 15px 10px;
   width: 100%;
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
 
-  &:link, &:visited {
+    &:link, &:visited {
     text-decoration: none;
     color: inherit;
   }
@@ -131,4 +137,9 @@
   bottom: 70px;
   left: 0;
   width: 100%;
+  @media (min-width: $desktop) {
+    width: 450px;
+    left: 16.5rem;
+    top: 25px;
+  }
 }
