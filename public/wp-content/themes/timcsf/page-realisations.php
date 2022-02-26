@@ -2,21 +2,23 @@
 
 /*Template name: Réalisations*/
 
-echo "page-realisations.php";
+//echo "page-realisations.php";
 
-if(is_active_sidebar("gauche")){?>
-    <aside id="gauche" class="barregauche">
-        <?php get_sidebar("gauche")?>
-    </aside>
-<?php } ?>
+?>
+    <div class="header__bandeau horsAccueil">
+        <div class="header__bandeau__blockTitre">
+            <h1 class="header__bandeau__blockTitre__titre"><?php echo get_post(468)->titre?></h1>
+            <p class="header__bandeau__blockTitre__p"><?php echo get_post(468)->texte?></p>
+        </div>
+    </div>
 </header>
 <main class="realisations">
     <div class="conteneur">
-        <h1 class="realisations__titre">Réalisations 1re année</h1>
+        <h1 class="realisations__titre">Réalisations <br/>1re année</h1>
         <div class="realisations__boutons__navigation">
-            <a class="realisations__boutons__navigation__1re" href="#">1re année</a>
-            <a class="realisations__boutons__navigation__2e" href="#">2e année</a>
-            <a class="realisations__boutons__navigation__3e" href="#">3e année</a>
+            <a class="realisations__boutons__navigation__lien boutonBleu" href="#">1re année</a>
+            <a class="realisations__boutons__navigation__lien boutonBleu" href="#">2e année</a>
+            <a class="realisations__boutons__navigation__lien boutonBleu" href="#">3e année</a>
         </div>
         <div class="realisations__galerie">
             <a href="#" class="realisations__galerie__realisation">
@@ -73,17 +75,12 @@ if(is_active_sidebar("gauche")){?>
                 <p class="realisations__galerie__realisation__titre">Animation d’un logo - Cégep de Sainte-Foy</p>
                 <p class="realisations__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
             </a>
-            <a class="realisations__boutons__voirPlus" href="#">Voir plus de réalisations</a>
+            <a class="realisations__boutons boutonBleu" href="#">Voir plus de réalisations</a>
+        </div>
+        <div class="boutonHautPage">
+            <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>
     </div>
 </main>
-
-
-<?php
-if(is_active_sidebar("droite")){?>
-    <aside id="droite" class="barredroite">
-        <?php get_sidebar("droite")?>
-    </aside>
-<?php } ?>
 
 <?php get_footer(); ?>

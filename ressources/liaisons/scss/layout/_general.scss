@@ -17,5 +17,6 @@ p, h1, h2, h3 {
   @media (min-width: $desktop) {
     max-width: 1000px;
     position: relative;
+    padding: 0;
   }
 }

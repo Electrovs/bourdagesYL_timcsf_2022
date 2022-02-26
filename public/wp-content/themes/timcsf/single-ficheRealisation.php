@@ -3,7 +3,13 @@
 /*Template name: Fiche Réalisation*/
 
 
-echo "single-ficheRealisation.php"; ?>
+//echo "single-ficheRealisation.php"; ?>
+    <div class="header__bandeau horsAccueil">
+        <div class="header__bandeau__blockTitre">
+            <h1 class="header__bandeau__blockTitre__titre"><?php echo get_post(468)->titre?></h1>
+            <p class="header__bandeau__blockTitre__p"><?php echo get_post(468)->texte?></p>
+        </div>
+    </div>
 </header>
 <main class="ficheRealisation">
     <div class="conteneur">
@@ -27,7 +33,7 @@ echo "single-ficheRealisation.php"; ?>
                 </p>
                 <div class="ficheRealisation__infos__infoRealisation__technologies">
                     <p class="ficheRealisation__infos__infoRealisation__technologies__titreListe">Technologies utilisées</p>
-                    <div class="fficheRealisation__infos__infoRealisation__technologies__listes">
+                    <div class="ficheRealisation__infos__infoRealisation__technologies__listes">
                         <ul class="ficheRealisation__infos__infoRealisation__technologies__liste">
                             <li class="ficheRealisation__infos__infoRealisation__technologies__item">Adobe Illustrator</li>
                             <li class="ficheRealisation__infos__infoRealisation__technologies__item">Adobe After Effects</li>
@@ -84,12 +90,12 @@ echo "single-ficheRealisation.php"; ?>
             <p class="ficheRealisation__biographie__mobile__texte">
                 <img
                         class="ficheRealisation__biographie__mobile__image"
-                        src="https://via.placeholder.com/300x169"
+                        src="https://via.placeholder.com/168x168"
                         alt="image d'une réalisation"
                 >
                 La troisième fois c’est la bonne!
                 N’ayant pas encore trouvé ma voie après avoir complété mes sciences de la nature et mon
-                baccalauréat en comptabilité, j’ai entrepris leprogramme des TIM déterminée à trouver un domaine
+                baccalauréat en comptabilité, j’ai entrepris le programme des TIM déterminée à trouver un domaine
                 que j’allais vraiment aimer. Le dicton a eu bienraison. Après deux programmes qui n’ont pas allumé
                 d’étincelle, j’ai enfin trouvé ma vraie passion dans le développement web.
                 Dans ce domaine varié, je m’épanouis plus particulièrement lorsque je fais du design UX et UI et du
@@ -97,9 +103,10 @@ echo "single-ficheRealisation.php"; ?>
                 à profit ma créativité et mon amour pour la résolution de problèmes.
             </p>
             <div class="ficheRealisation__biographie__mobile__media">
-                <a class="ficheRealisation__biographie__mobile__media__lien">
-                    <i class="ficheRealisation__biographie__mobile__media__icon">MEDIA</i>
-                </a>
+                <a href="<?php echo get_post(126)->texte?>" class="ficheRealisation__biographie__mobile__media__lien fa fa-at"></a>
+                <a href="<?php echo get_post(127)->texte?>" class="ficheRealisation__biographie__mobile__media__lien fa fa-twitter"></a>
+                <a href="<?php echo get_post(128)->texte?>" class="ficheRealisation__biographie__mobile__media__lien fa fa-linkedin"></a>
+                <a href="<?php echo get_post(148)->texte?>" class="ficheRealisation__biographie__mobile__media__lien fa fa-globe"></a>
             </div>
         </div>
         <div class="ficheRealisation__autresProjets">
@@ -116,7 +123,10 @@ echo "single-ficheRealisation.php"; ?>
                 </a>
             </div>
         </div>
-        <a class="ficheRealisation__boutonRetour" href="#"><i>Icon retour</i>Retour aux réalisations</a>
+        <a class="ficheRealisation__boutonRetour boutonBleu" href="#">Retour aux réalisations</a>
+        <div class="boutonHautPage">
+            <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
+        </div>
     </div>
 </main>
 

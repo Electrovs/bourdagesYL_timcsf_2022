@@ -522,6 +522,7 @@ p, h1, h2, h3 {
   .conteneur {
     max-width: 1000px;
     position: relative;
+    padding: 0;
   }
 }
 
@@ -1030,6 +1031,212 @@ p, h1, h2, h3 {
   .horsAccueil {
     display: none;
   }
+}
+
+.realisations__titre {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .realisations__titre br {
+    display: none;
+  }
+}
+.realisations__boutons__navigation {
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .realisations__boutons__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.realisations__boutons__navigation__lien {
+  margin-top: 20px;
+}
+@media (min-width: 940px) {
+  .realisations__boutons__navigation__lien {
+    width: 320px;
+  }
+}
+.realisations__galerie {
+  margin: 30px -10px 0 -10px;
+  padding: 0 10px;
+}
+@media (min-width: 940px) {
+  .realisations__galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.realisations__galerie__realisation {
+  display: flex;
+  flex-direction: column;
+  margin: 20px -10px 0 -10px;
+  padding: 10px 10px;
+  background-color: #004C94;
+  height: 332px;
+}
+@media (min-width: 940px) {
+  .realisations__galerie__realisation {
+    width: 320px;
+    height: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+}
+.realisations__galerie__realisation__titre {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.realisations__galerie__realisation__nom {
+  font-size: 18px;
+  padding-top: 30px;
+}
+.realisations__boutons {
+  font-size: 18px;
+  padding-top: 15px;
+  margin-top: 30px;
+}
+@media (min-width: 940px) {
+  .realisations__boutons {
+    margin-top: 50px;
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.ficheRealisation__photoPrincipale {
+  margin-top: 30px;
+  border: 5px solid #F88728;
+  width: 355px;
+  border-radius: 8px;
+}
+.ficheRealisation__infos {
+  margin-top: 20px;
+}
+.ficheRealisation__infos__infoRealisation {
+  font-size: 18px;
+}
+.ficheRealisation__infos__infoRealisation__titre {
+  font-size: 32px;
+}
+.ficheRealisation__infos__infoRealisation__nomAnnee {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ficheRealisation__infos__infoRealisation__nomAnnee__nom {
+  width: 168px;
+}
+.ficheRealisation__infos__infoRealisation__nomAnnee__annee {
+  padding-right: 30px;
+}
+.ficheRealisation__infos__infoRealisation__cours {
+  margin-top: 20px;
+}
+.ficheRealisation__infos__infoRealisation__description {
+  margin-top: 20px;
+  font-weight: 300;
+}
+.ficheRealisation__infos__infoRealisation__technologies {
+  background-color: #004C94;
+  margin: 30px -10px 0 -10px;
+  padding: 20px 10px;
+  color: #FFFFFF;
+}
+.ficheRealisation__infos__infoRealisation__technologies__titreListe {
+  font-size: 18px;
+}
+.ficheRealisation__infos__infoRealisation__technologies__listes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.ficheRealisation__infos__infoRealisation__technologies__liste {
+  padding-left: 15px;
+  width: 168px;
+  margin-bottom: 0;
+}
+.ficheRealisation__infos__autresImages__image {
+  border: 5px solid #F88728;
+  margin-top: 20px;
+  width: 355px;
+  border-radius: 8px;
+}
+.ficheRealisation__biographie {
+  display: none;
+}
+.ficheRealisation__biographie__mobile {
+  background-color: #004C94;
+  color: #FFFFFF;
+  margin: 30px -10px 0 -10px;
+  padding: 20px 10px 30px 10px;
+}
+.ficheRealisation__biographie__mobile__titre {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ficheRealisation__biographie__mobile__texte {
+  margin-top: 20px;
+  font-weight: 300;
+}
+.ficheRealisation__biographie__mobile__image {
+  border: 5px solid #F88728;
+  width: 168px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.ficheRealisation__biographie__mobile__media {
+  margin-top: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+.ficheRealisation__biographie__mobile__media__lien {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  text-align: center;
+  border-radius: 8px;
+  padding-top: 5px;
+  margin: 0 5px;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__biographie__mobile {
+    display: none;
+  }
+}
+.ficheRealisation__autresProjets {
+  margin-top: 30px;
+}
+.ficheRealisation__autresProjets__galerie {
+  background-color: #004C94;
+  height: 332px;
+  margin: 30px -10px 0 -10px;
+  padding: 20px 10px 0 10px;
+}
+.ficheRealisation__autresProjets__galerie__realisation__titre {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.ficheRealisation__autresProjets__galerie__realisation__nom {
+  font-size: 18px;
+  margin-top: 30px;
+}
+.ficheRealisation__autresProjets__galerie__realisation__image {
+  width: 355px;
+}
+.ficheRealisation__boutonRetour {
+  padding-top: 15px;
+  margin-top: 30px;
+  font-size: 18px;
 }
 
 .stages__titre {

@@ -1,0 +1,173 @@
+
+
+
+
+
+
+.ficheRealisation{
+
+  &__photoPrincipale{
+    margin-top: 30px;
+    border: 5px solid $orangeP;
+    width: 355px;
+    border-radius: 8px;
+  }
+
+  &__infos{
+    margin-top: 20px;
+
+    &__infoRealisation{
+      font-size: 18px;
+
+      &__titre{
+        font-size: 32px;
+      }
+
+      &__nomAnnee{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__nom{
+          width: 168px;
+        }
+
+        &__annee{
+          padding-right: 30px;
+        }
+      }
+
+      &__cours{
+        margin-top: 20px;
+      }
+
+      &__description{
+        margin-top: 20px;
+        font-weight: 300;
+      }
+
+      &__technologies{
+        background-color: $bleuP;
+        margin: 30px -10px 0 -10px;
+        padding: 20px 10px;
+        color: $blanc;
+
+        &__titreListe{
+          font-size: 18px;
+        }
+
+        &__listes{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+
+        &__liste{
+          padding-left: 15px;
+          width: 168px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__autresImages{
+
+      &__image{
+        border: 5px solid $orangeP;
+        margin-top: 20px;
+        width: 355px;
+        border-radius: 8px;
+      }
+
+    }
+  }
+
+  &__biographie{
+    display: none;
+    @media (min-width: $desktop) {
+
+    }
+
+    &__mobile{
+      background-color: $bleuP;
+      color: $blanc;
+      margin: 30px -10px 0 -10px;
+      padding: 20px 10px 30px 10px;
+
+      &__titre{
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &__texte{
+        margin-top: 20px;
+        font-weight: 300;
+      }
+
+      &__image{
+        border: 5px solid $orangeP;
+        width: 168px;
+        float: left;
+        margin: 0 10px 0 0;
+      }
+
+      &__media{
+        margin-top: 30px;
+        font-size: 40px;
+        text-align: center;
+
+        &__lien{
+          width: 50px;
+          height: 50px;
+          background-color: $noir;
+          text-align: center;
+          border-radius: 8px;
+          padding-top: 5px;
+          margin: 0 5px;
+        }
+
+      }
+      @media (min-width: $desktop) {
+        display: none;
+      }
+
+    }
+  }
+
+  &__autresProjets{
+    margin-top: 30px;
+
+    &__galerie{
+      background-color: $bleuP;
+      height: 332px;
+      margin: 30px -10px 0 -10px;
+      padding: 20px 10px 0 10px;
+
+      &__realisation{
+
+        &__titre{
+          font-size: 18px;
+          margin-top: 20px;
+        }
+
+        &__nom{
+          font-size: 18px;
+          margin-top: 30px;
+        }
+
+        &__image{
+          width: 355px;
+        }
+      }
+    }
+  }
+
+  &__boutonRetour{
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+}

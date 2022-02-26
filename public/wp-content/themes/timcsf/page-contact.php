@@ -2,8 +2,9 @@
 
 /*Template name: Contact*/
 
-//echo "page-contact.php"; ?>
+//echo "page-contact.php";
 
+?>
     <div class="header__bandeau horsAccueil">
         <div class="header__bandeau__blockTitre">
             <h1 class="header__bandeau__blockTitre__titre"><?php echo get_post(468)->titre?></h1>
