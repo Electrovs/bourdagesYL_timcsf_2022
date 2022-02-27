@@ -16,11 +16,22 @@
   height: 50px;
   text-align: center;
   padding: 10px 0;
+  font-weight: 700;
   @media (min-width: $desktop) {
     width: 235px;
     height: 40px;
-    padding: 5px 0;
+    padding: 8px 0;
 
+  }
+
+  &:hover{
+    text-decoration: underline;
+    background-color: $orange4;
+  }
+  &:active{
+    text-decoration: underline;
+    background-color: $orange1;
+    color: $orange5;
   }
 }
 
@@ -28,12 +39,23 @@
   display: block;
   font-size: 24px;
   text-transform: uppercase;
+  font-weight: 700;
   border-radius: 8px;
   background-color: $bleuP;
   width: 100%;
   height: 50px;
   text-align: center;
   padding: 10px 0;
+
+  &:hover{
+    text-decoration: underline;
+    background-color: $bleu4;
+  }
+  &:active{
+    text-decoration: underline;
+    background-color: $bleu1;
+    color: $bleu5;
+  }
 }
 
 .boutonHautPage{
@@ -51,6 +73,14 @@
       text-align: center;
       border-radius: 40px;
       padding: 15px 0;
+
+      &:hover{
+        background-color: $orange4;
+      }
+      &:active{
+        background-color: $orange1;
+        color: $orange5;
+      }
     }
   }
 }

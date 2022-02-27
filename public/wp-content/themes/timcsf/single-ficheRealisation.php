@@ -15,7 +15,7 @@
     <div class="conteneur">
         <img
                 class="ficheRealisation__photoPrincipale"
-                src="https://via.placeholder.com/355x200"
+                src="https://via.placeholder.com/2000x1125"
                 alt="image d'une réalisation"
         >
         <div class="ficheRealisation__infos">
@@ -62,15 +62,16 @@
             <div class="ficheRealisation__biographie__titreMedia">
                 <h2 class="ficheRealisation__biographie__titreMedia__titre">Yves-Luc Bernier Bourdages</h2>
                 <div class="ficheRealisation__biographie__titreMedia__media">
-                    <a class="ficheRealisation__biographie__titreMedia__media__lien">
-                        <i class="ficheRealisation__biographie__titreMedia__media__icon">MEDIA</i>
-                    </a>
+                    <a href="<?php echo get_post(126)->texte?>" class="ficheRealisation__biographie__titreMedia__media__lien fa fa-at"></a>
+                    <a href="<?php echo get_post(127)->texte?>" class="ficheRealisation__biographie__titreMedia__media__lien fa fa-twitter"></a>
+                    <a href="<?php echo get_post(128)->texte?>" class="ficheRealisation__biographie__titreMedia__media__lien fa fa-linkedin"></a>
+                    <a href="<?php echo get_post(148)->texte?>" class="ficheRealisation__biographie__titreMedia__media__lien fa fa-globe"></a>
                 </div>
             </div>
             <div class="ficheRealisation__biographie__imageTexte">
                 <img
                         class="ficheRealisation__biographie__imageTexte__image"
-                        src="https://via.placeholder.com/355x200"
+                        src="https://via.placeholder.com/235x235"
                         alt="image d'une réalisation"
                 >
                 <p class="ficheRealisation__biographie__imageTexte__texte">
@@ -111,19 +112,32 @@
         </div>
         <div class="ficheRealisation__autresProjets">
             <h2 class="ficheRealisation__autresProjets__titre">Autres projets de Yves-Luc Bernier Bourdages</h2>
-            <div class="ficheRealisation__autresProjets__galerie">
-                <a class="ficheRealisation__autresProjets__galerie__realisation" href="#">
-                    <img
-                            class="ficheRealisation__autresProjets__galerie__realisation__image"
-                            src="https://via.placeholder.com/355x200"
-                            alt="image d'une réalisation"
-                    >
-                    <p class="ficheRealisation__autresProjets__galerie__realisation__titre">Festival OFF</p>
-                    <p class="ficheRealisation__autresProjets__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
-                </a>
+            <div class="ficheRealisation__autresProjets__flex">
+                <div class="ficheRealisation__autresProjets__galerie">
+                    <a class="ficheRealisation__autresProjets__galerie__realisation" href="#">
+                        <img
+                                class="ficheRealisation__autresProjets__galerie__realisation__image"
+                                src="https://via.placeholder.com/355x200"
+                                alt="image d'une réalisation"
+                        >
+                        <p class="ficheRealisation__autresProjets__galerie__realisation__titre">Festival OFF</p>
+                        <p class="ficheRealisation__autresProjets__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+                    </a>
+                </div>
+                <div class="ficheRealisation__autresProjets__galerie">
+                    <a class="ficheRealisation__autresProjets__galerie__realisation" href="#">
+                        <img
+                                class="ficheRealisation__autresProjets__galerie__realisation__image"
+                                src="https://via.placeholder.com/355x200"
+                                alt="image d'une réalisation"
+                        >
+                        <p class="ficheRealisation__autresProjets__galerie__realisation__titre">Festival OFF</p>
+                        <p class="ficheRealisation__autresProjets__galerie__realisation__nom">Yves-Luc Bernier Bourdages</p>
+                    </a>
+                </div>
             </div>
         </div>
-        <a class="ficheRealisation__boutonRetour boutonBleu" href="#">Retour aux réalisations</a>
+        <a class="ficheRealisation__boutonRetour boutonBleu" href="#"><i class="fa fa-arrow-left"></i>Retour aux réalisations</a>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>

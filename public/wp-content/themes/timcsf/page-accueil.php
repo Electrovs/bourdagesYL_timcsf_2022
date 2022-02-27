@@ -71,7 +71,7 @@
                 <?php echo get_post(479)->texte?>
             </p>
             <div class="formation__bourses__bouton__alignRight">
-                <a class="formation__bourses__bouton boutonInscrit" href="<?php echo get_post(480)->titre?>"><?php echo get_post(480)->texte?></a>
+                <a class="formation__bourses__bouton boutonInscrit" href="<?php echo get_post(480)->titre?>"><?php echo get_post(480)->texte?><i class="fa fa-external-link"></i></a>
             </div>
         </div>
     </div>
@@ -84,9 +84,9 @@
                         <?php echo get_post(136)->texte?>
                     </p>
                     <div class="formation__bottom__grille__boutons">
-                        <a class="formation__bottom__grille__boutons__grille boutonBleu" href="<?php echo get_post(481)->texte?>"><?php echo get_post(481)->titre?></a>
+                        <a class="formation__bottom__grille__boutons__grille boutonBleu" href="<?php echo get_post(481)->texte?>"><?php echo get_post(481)->titre?><i class="fa fa-external-link"></i></a>
                         <p class="formation__bottom__grille__boutons__p">Ou</p>
-                        <a class="formation__bottom__grille__boutons__telecharger boutonBleu" href="<?php echo get_post(484)->texte?>" download><?php echo get_post(484)->titre?></a>
+                        <a class="formation__bottom__grille__boutons__telecharger boutonBleu" href="<?php echo get_post(484)->texte?>" download><?php echo get_post(484)->titre?><i class="fa fa-download"></i></a>
                     </div>
                 </div>
             </div>

@@ -74,6 +74,14 @@
       padding: 5px 0;
       border-radius: 8px;
       background-color: $noir;
+
+      &:hover{
+        background-color: $orange5;
+      }
+      &:active{
+        background-color: $orange1;
+        color: $orange5;
+      }
     }
 
   }

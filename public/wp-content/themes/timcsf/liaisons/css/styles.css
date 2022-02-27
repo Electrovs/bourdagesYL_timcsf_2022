@@ -461,25 +461,45 @@ a:hover, a:active, a:link, a:visited {
   height: 50px;
   text-align: center;
   padding: 10px 0;
+  font-weight: 700;
 }
 @media (min-width: 940px) {
   .boutonInscrit {
     width: 235px;
     height: 40px;
-    padding: 5px 0;
+    padding: 8px 0;
   }
+}
+.boutonInscrit:hover {
+  text-decoration: underline;
+  background-color: #DA690A;
+}
+.boutonInscrit:active {
+  text-decoration: underline;
+  background-color: #FFC364;
+  color: #BC4B00;
 }
 
 .boutonBleu {
   display: block;
   font-size: 24px;
   text-transform: uppercase;
+  font-weight: 700;
   border-radius: 8px;
   background-color: #004C94;
   width: 100%;
   height: 50px;
   text-align: center;
   padding: 10px 0;
+}
+.boutonBleu:hover {
+  text-decoration: underline;
+  background-color: #002E76;
+}
+.boutonBleu:active {
+  text-decoration: underline;
+  background-color: #2688D0;
+  color: #001058;
 }
 
 @media (min-width: 940px) {
@@ -497,6 +517,13 @@ a:hover, a:active, a:link, a:visited {
     text-align: center;
     border-radius: 40px;
     padding: 15px 0;
+  }
+  .boutonHautPage__bouton:hover {
+    background-color: #DA690A;
+  }
+  .boutonHautPage__bouton:active {
+    background-color: #FFC364;
+    color: #BC4B00;
   }
 }
 
@@ -647,6 +674,9 @@ p, h1, h2, h3 {
 .formation__bourses__bouton {
   margin-top: 30px;
 }
+.formation__bourses__bouton i {
+  padding-left: 10px;
+}
 @media (min-width: 940px) {
   .formation__bourses__bouton__alignRight {
     text-align: right;
@@ -672,6 +702,9 @@ p, h1, h2, h3 {
 .formation__bottom__grille__boutons__grille {
   margin-top: 20px;
 }
+.formation__bottom__grille__boutons__grille i {
+  padding-left: 10px;
+}
 .formation__bottom__grille__boutons__p {
   margin-top: 20px;
   text-transform: uppercase;
@@ -681,6 +714,9 @@ p, h1, h2, h3 {
 }
 .formation__bottom__grille__boutons__telecharger {
   margin-top: 20px;
+}
+.formation__bottom__grille__boutons__telecharger i {
+  padding-left: 10px;
 }
 .formation__bottom__temoignages {
   margin: 0 -10px;
@@ -1116,11 +1152,32 @@ p, h1, h2, h3 {
   width: 355px;
   border-radius: 8px;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__photoPrincipale {
+    width: 1000px;
+    margin-top: 50px;
+  }
+}
 .ficheRealisation__infos {
   margin-top: 20px;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .ficheRealisation__infos__infoRealisation {
   font-size: 18px;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__infos__infoRealisation {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    min-height: 600px;
+  }
 }
 .ficheRealisation__infos__infoRealisation__titre {
   font-size: 32px;
@@ -1145,11 +1202,23 @@ p, h1, h2, h3 {
   margin-top: 20px;
   font-weight: 300;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__infos__infoRealisation__description {
+    flex-grow: 1;
+  }
+}
 .ficheRealisation__infos__infoRealisation__technologies {
   background-color: #004C94;
   margin: 30px -10px 0 -10px;
   padding: 20px 10px;
   color: #FFFFFF;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__infos__infoRealisation__technologies {
+    margin: 0;
+    width: 490px;
+    border-radius: 8px;
+  }
 }
 .ficheRealisation__infos__infoRealisation__technologies__titreListe {
   font-size: 18px;
@@ -1164,14 +1233,72 @@ p, h1, h2, h3 {
   width: 168px;
   margin-bottom: 0;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__infos__autresImages {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .ficheRealisation__infos__autresImages__image {
   border: 5px solid #F88728;
   margin-top: 20px;
   width: 355px;
   border-radius: 8px;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__infos__autresImages__image {
+    width: 490px;
+  }
+}
 .ficheRealisation__biographie {
   display: none;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__biographie {
+    display: block;
+    background-color: #004C94;
+    color: #FFFFFF;
+    padding: 20px 10px 30px 10px;
+    margin: 30px 0 0 0;
+  }
+  .ficheRealisation__biographie__titreMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ficheRealisation__biographie__titreMedia__titre {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .ficheRealisation__biographie__titreMedia__media {
+    font-size: 40px;
+    text-align: center;
+  }
+  .ficheRealisation__biographie__titreMedia__media__lien {
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 5px;
+    margin: 0 5px;
+  }
+  .ficheRealisation__biographie__imageTexte {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .ficheRealisation__biographie__imageTexte__texte {
+    font-weight: 300;
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  .ficheRealisation__biographie__imageTexte__image {
+    border: 5px solid #F88728;
+    border-radius: 8px;
+    width: 235px;
+  }
 }
 .ficheRealisation__biographie__mobile {
   background-color: #004C94;
@@ -1191,6 +1318,7 @@ p, h1, h2, h3 {
 .ficheRealisation__biographie__mobile__image {
   border: 5px solid #F88728;
   width: 168px;
+  border-radius: 8px;
   float: left;
   margin: 0 10px 0 0;
 }
@@ -1216,11 +1344,23 @@ p, h1, h2, h3 {
 .ficheRealisation__autresProjets {
   margin-top: 30px;
 }
+@media (min-width: 940px) {
+  .ficheRealisation__autresProjets__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .ficheRealisation__autresProjets__galerie {
   background-color: #004C94;
   height: 332px;
   margin: 30px -10px 0 -10px;
   padding: 20px 10px 0 10px;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__autresProjets__galerie {
+    border-radius: 8px;
+  }
 }
 .ficheRealisation__autresProjets__galerie__realisation__titre {
   font-size: 18px;
@@ -1232,11 +1372,24 @@ p, h1, h2, h3 {
 }
 .ficheRealisation__autresProjets__galerie__realisation__image {
   width: 355px;
+  border: 5px solid #F88728;
+  border-radius: 8px;
 }
 .ficheRealisation__boutonRetour {
   padding-top: 15px;
   margin-top: 30px;
   font-size: 18px;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__boutonRetour {
+    width: 280px;
+    font-size: 16px;
+    margin-top: 80px;
+  }
+  .ficheRealisation__boutonRetour i {
+    padding-right: 10px;
+    font-size: 18px;
+  }
 }
 
 .stages__titre {
@@ -1473,6 +1626,13 @@ p, h1, h2, h3 {
   border-radius: 8px;
   background-color: #000000;
 }
+.footer__media__bouton:hover {
+  background-color: #BC4B00;
+}
+.footer__media__bouton:active {
+  background-color: #FFC364;
+  color: #BC4B00;
+}
 .footer__copyright {
   margin-top: 100px;
   font-weight: lighter;
@@ -1484,7 +1644,7 @@ p, h1, h2, h3 {
 
 .header {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 .header__top {
   background-color: #004C94;
