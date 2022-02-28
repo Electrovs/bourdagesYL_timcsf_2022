@@ -42,15 +42,19 @@
         switch (true) {
             case isset($_POST["btn_01"]):
                 $metaValue = array("1", "2");
+                $anneeTitre = "1re";
                 break;
             case isset($_POST["btn_02"]):
                 $metaValue = array("3", "4");
+                $anneeTitre = "2e";
                 break;
             case isset($_POST["btn_03"]):
                 $metaValue = array("5", "6");
+                $anneeTitre = "3e";
                 break;
             default:
                 $metaValue = array("1", "2");
+                $anneeTitre = "1re";
         }
 
         //Requête pour obtenir les infos des finissants
@@ -69,13 +73,12 @@
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
                 array_push($arrCours, $post);
-                var_dump(get_field("session"));
             }
         }
         wp_reset_postdata();
 
         ?>
-        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/>1re année</h1>
+        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/><?php echo $anneeTitre?> année</h1>
         <form class="realisations__boutons__navigation" action="" method="post">
             <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
             <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
@@ -89,7 +92,7 @@
             //Requête pour obtenir les infos des finissants
             $args = array(
                 'post_type' => 'projets',
-                'posts_per_page' => 6,
+                'posts_per_page' => -1,
                 'post_status' => 'publish',
                 "meta_key" => "titre",
                 "orderby" => "meta_value",
@@ -98,42 +101,39 @@
 
             $the_query = new WP_Query($args);
 
+            $intpost = 1;
+
             if($the_query->have_posts()){
                 while($the_query->have_posts()) {
                     $the_query->the_post();
                     //Photo obtient un tableau (sizes) contenant les différentes tailles d'image
                     $photo=get_field("photo_1");
                     //ici on affiche seulement la taille thumbnail
+
                     for($intcpt=0; $intcpt<count($arrCours); $intcpt++){
 
-                        if(get_field("cours_id")==get_field("id", $arrCours[$intcpt]->ID)){
+                        if(get_field("cours_id")==get_field("id", $arrCours[$intcpt]->ID)){?>
+                            <a href="<?php the_permalink();?>" class="realisations__galerie__realisation">
+                                <img
+                                        class="realisations__galerie__realisation__image"
+                                        src="<?php echo $photo["sizes"]["large"]; ?>"
+                                        alt="image d'une réalisation"
+                                >
+                                <p class="realisations__galerie__realisation__titre"><?php the_field("titre");?></p>
+                                <?php
+                                for($cpt=0; $cpt<count($arrFinissants); $cpt++){
 
-                            echo get_field("titre", $arrCours[$intcpt]->ID);
-
-                        }
-
-
-                    }
-                    ?>
-                        <a href="<?php the_permalink();?>" class="realisations__galerie__realisation">
-                            <img
-                                    class="realisations__galerie__realisation__image"
-                                    src="<?php echo $photo["sizes"]["large"]; ?>"
-                                    alt="image d'une réalisation"
-                            >
-                            <p class="realisations__galerie__realisation__titre"><?php the_field("titre");?></p>
-                            <?php
-                            for($cpt=0; $cpt<count($arrFinissants); $cpt++){
-
-                                if(get_field("diplome_id")==get_field("id", $arrFinissants[$cpt]->ID)){ ?>
-                                    <p class="realisations__galerie__realisation__nom"><?php echo get_field("prenom", $arrFinissants[$cpt]->ID)?> <?php echo get_field("nom", $arrFinissants[$cpt]->ID)?></p>
+                                    if(get_field("diplome_id")==get_field("id", $arrFinissants[$cpt]->ID)){ ?>
+                                        <p class="realisations__galerie__realisation__nom"><?php echo get_field("prenom", $arrFinissants[$cpt]->ID)?> <?php echo get_field("nom", $arrFinissants[$cpt]->ID)?></p>
+                                    <?php } ?>
                                 <?php } ?>
-                            <?php } ?>
-                        </a>
+                            </a>
+                 <?php } ?>
+              <?php } ?>
           <?php }
             } ?>
-            <a class="realisations__boutons boutonBleu" href="#"><?php echo get_post(840)->titre?></a>
         </div>
+        <a class="realisations__boutons boutonBleu" href="#"><?php echo get_post(840)->titre?></a>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>
