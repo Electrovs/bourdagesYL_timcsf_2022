@@ -32,7 +32,7 @@
                     toutes les différentes sphères d’activités auxquelles il participe.
                 </p>
                 <div class="ficheRealisation__infos__infoRealisation__technologies">
-                    <p class="ficheRealisation__infos__infoRealisation__technologies__titreListe">Technologies utilisées</p>
+                    <p class="ficheRealisation__infos__infoRealisation__technologies__titreListe"><?php echo get_post(841)->titre?></p>
                     <div class="ficheRealisation__infos__infoRealisation__technologies__listes">
                         <ul class="ficheRealisation__infos__infoRealisation__technologies__liste">
                             <li class="ficheRealisation__infos__infoRealisation__technologies__item">Adobe Illustrator</li>
@@ -111,7 +111,7 @@
             </div>
         </div>
         <div class="ficheRealisation__autresProjets">
-            <h2 class="ficheRealisation__autresProjets__titre">Autres projets de Yves-Luc Bernier Bourdages</h2>
+            <h2 class="ficheRealisation__autresProjets__titre"><?php echo get_post(841)->texte?></h2>
             <div class="ficheRealisation__autresProjets__flex">
                 <div class="ficheRealisation__autresProjets__galerie">
                     <a class="ficheRealisation__autresProjets__galerie__realisation" href="#">
@@ -137,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <a class="ficheRealisation__boutonRetour boutonBleu" href="#"><i class="fa fa-arrow-left"></i>Retour aux réalisations</a>
+        <a class="ficheRealisation__boutonRetour boutonBleu" href="#"><i class="fa fa-arrow-left"></i><?php echo get_post(842)->titre?></a>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>

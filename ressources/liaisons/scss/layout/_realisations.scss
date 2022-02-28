@@ -62,6 +62,12 @@
         margin-top: 30px;
       }
 
+      &__image{
+        height: 200px;
+        border-radius: 8px;
+        border: 5px solid $orangeP;
+      }
+
 
       &__titre{
         font-size: 18px;
