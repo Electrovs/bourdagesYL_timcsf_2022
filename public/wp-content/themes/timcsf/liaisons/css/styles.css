@@ -1229,15 +1229,17 @@ p, h1, h2, h3 {
 .ficheRealisation__infos__infoRealisation__technologies__titreListe {
   font-size: 18px;
 }
-.ficheRealisation__infos__infoRealisation__technologies__listes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 .ficheRealisation__infos__infoRealisation__technologies__liste {
   padding-left: 15px;
-  width: 168px;
+  width: 100%;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ficheRealisation__infos__infoRealisation__technologies__item {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 @media (min-width: 940px) {
   .ficheRealisation__infos__autresImages {
@@ -1299,6 +1301,8 @@ p, h1, h2, h3 {
     font-weight: 300;
     margin-left: 20px;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
   }
   .ficheRealisation__biographie__imageTexte__image {
     border: 5px solid #F88728;
@@ -1354,19 +1358,24 @@ p, h1, h2, h3 {
   .ficheRealisation__autresProjets__flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 }
 .ficheRealisation__autresProjets__galerie {
   background-color: #004C94;
-  height: 332px;
+  height: 350px;
   margin: 30px -10px 0 -10px;
   padding: 20px 10px 0 10px;
 }
 @media (min-width: 940px) {
   .ficheRealisation__autresProjets__galerie {
     border-radius: 8px;
+    width: 320px;
+    margin: 30px 20px 0 20px;
   }
+}
+.ficheRealisation__autresProjets__galerie__realisation {
+  height: 100%;
 }
 .ficheRealisation__autresProjets__galerie__realisation__titre {
   font-size: 18px;
@@ -1378,8 +1387,15 @@ p, h1, h2, h3 {
 }
 .ficheRealisation__autresProjets__galerie__realisation__image {
   width: 355px;
+  height: 200px;
   border: 5px solid #F88728;
   border-radius: 8px;
+}
+@media (min-width: 940px) {
+  .ficheRealisation__autresProjets__galerie__realisation__image {
+    width: 300px;
+    height: 170px;
+  }
 }
 .ficheRealisation__boutonRetour {
   padding-top: 15px;
@@ -1392,10 +1408,10 @@ p, h1, h2, h3 {
     font-size: 16px;
     margin-top: 80px;
   }
-  .ficheRealisation__boutonRetour i {
-    padding-right: 10px;
-    font-size: 18px;
-  }
+}
+.ficheRealisation__boutonRetour i {
+  padding-right: 10px;
+  font-size: 18px;
 }
 
 .stages__titre {
