@@ -1,8 +1,8 @@
 <?php get_header();
 
-/*Template name: Réalisations*/
+/*Template name: Projets*/
 
-//echo "page-realisations.php";
+//echo "page-projets.php";
 
 ?>
     <div class="header__bandeau horsAccueil">
