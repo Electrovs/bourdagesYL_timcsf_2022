@@ -123,6 +123,15 @@
 
     &__erreur{
       display: none;
+      flex-direction: row;
+      margin-top: 10px;
+      &__icon{
+        color: red;
+      }
+      &__p{
+        color: red;
+        margin-left: 10px;
+      }
     }
 
     &__bouton{
@@ -136,11 +145,49 @@
   }
 }
 
-.horsAccueil{
+.telephone{
+  //display: none;
+}
 
-  @media (min-width: $desktop) {
-    display: none;
+
+.erreur{
+  & label{
+    color: red;
+  }
+  & .contact__formulaire__label__labelCheckbox{
+    color: $noir;
   }
 
-
+  & input, textarea, select{
+    border: 5px solid red;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

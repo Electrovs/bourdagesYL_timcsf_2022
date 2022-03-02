@@ -20,3 +20,9 @@ p, h1, h2, h3 {
     padding: 0;
   }
 }
+
+.horsAccueil{
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
