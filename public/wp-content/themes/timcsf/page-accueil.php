@@ -30,7 +30,9 @@
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(134)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <?php echo get_post(134)->texte?>
+                        <div>
+                            <?php echo get_post(134)->texte?>
+                        </div>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__fiche integration">
                         <div class="formation__top__fichesInfo__fiches__entete">

@@ -124,4 +124,5 @@
         </div>
     </div>
 </main>
+    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/validationFormulaire.js"></script>
 <?php get_footer(); ?>

@@ -22,7 +22,6 @@
 <?php wp_footer();?>
 
 <script src="<?php echo get_template_directory_uri();?>/liaisons/js/menuwp.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/liaisons/js/validationFormulaire.js"></script>
 <script>
     //ajout de la classe js, pour la gestion de la feuille de style, si le JavaScript est actif
     document.body.classList.add('js');
