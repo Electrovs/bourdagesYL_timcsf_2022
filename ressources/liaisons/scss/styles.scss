@@ -58,14 +58,22 @@
 /****** LAYOUT ******/
 @import 'layout/general';
 
+@import 'layout/accueil';
+
+@import 'layout/contact';
+
+@import 'layout/realisations';
+
+@import 'layout/ficheRealisation2';
+
+@import 'layout/stages';
+
 
 
 /****** MODULE ******/
-@import 'modules/piedPage';
+@import 'modules/footer';
 
-@import 'modules/entete';
+@import 'modules/header';
 
 @import "modules/navigation";
-
-@import "modules/article";
 

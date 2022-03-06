@@ -1,0 +1,299 @@
+
+
+
+
+
+
+.ficheRealisation{
+
+  &__photoPrincipale{
+    margin-top: 30px;
+    border: 5px solid $orangeP;
+    width: 355px;
+    border-radius: 8px;
+    @media (min-width: $desktop) {
+      width: 1000px;
+      margin-top: 50px;
+    }
+  }
+
+  &__infos{
+    margin-top: 20px;
+
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__infoRealisation{
+      font-size: 18px;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+        width: 490px;
+        min-height: 600px;
+      }
+
+      &__titre{
+        font-size: 32px;
+      }
+
+      &__nomAnnee{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__nom{
+          width: 168px;
+        }
+
+        &__annee{
+          padding-right: 30px;
+        }
+      }
+
+      &__cours{
+        margin-top: 20px;
+      }
+
+      &__description{
+        margin-top: 20px;
+        font-weight: 300;
+        @media (min-width: $desktop) {
+          flex-grow: 1;
+        }
+
+      }
+
+      &__technologies{
+        background-color: $bleuP;
+        margin: 30px -10px 0 -10px;
+        padding: 20px 10px;
+        color: $blanc;
+        @media (min-width: $desktop) {
+          margin: 0;
+          width: 490px;
+          border-radius: 8px;
+        }
+
+        &__titreListe{
+          font-size: 18px;
+        }
+
+        &__listes{
+        }
+
+        &__liste{
+          padding-left: 15px;
+          width: 100%;
+          margin-bottom: 0;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        &__item{
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__autresImages{
+
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__image{
+        border: 5px solid $orangeP;
+        margin-top: 20px;
+        width: 355px;
+        border-radius: 8px;
+        @media (min-width: $desktop) {
+          width: 490px;
+        }
+      }
+
+    }
+  }
+
+  &__biographie{
+    display: none;
+    @media (min-width: $desktop) {
+      display: block;
+      background-color: $bleuP;
+      color: $blanc;
+      padding: 20px 10px 30px 10px;
+      margin: 30px 0 0 0;
+
+      &__titreMedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__titre{
+          font-size: 24px;
+          text-transform: uppercase;
+        }
+
+        &__media{
+          font-size: 40px;
+          text-align: center;
+
+          &__lien{
+            width: 50px;
+            height: 50px;
+            background-color: $noir;
+            text-align: center;
+            border-radius: 8px;
+            padding-top: 5px;
+            margin: 0 5px;
+          }
+        }
+      }
+
+      &__imageTexte{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+        &__texte{
+          font-weight: 300;
+          margin-left: 20px;
+          padding-top: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__image{
+          border: 5px solid $orangeP;
+          border-radius: 8px;
+          width: 235px;
+        }
+      }
+    }
+
+    &__mobile{
+      background-color: $bleuP;
+      color: $blanc;
+      margin: 30px -10px 0 -10px;
+      padding: 20px 10px 30px 10px;
+
+      &__titre{
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &__texte{
+        margin-top: 20px;
+        font-weight: 300;
+      }
+
+      &__image{
+        border: 5px solid $orangeP;
+        width: 168px;
+        border-radius: 8px;
+        float: left;
+        margin: 0 10px 0 0;
+      }
+
+      &__media{
+        margin-top: 30px;
+        font-size: 40px;
+        text-align: center;
+
+        &__lien{
+          width: 50px;
+          height: 50px;
+          background-color: $noir;
+          text-align: center;
+          border-radius: 8px;
+          padding-top: 5px;
+          margin: 0 5px;
+        }
+
+      }
+      @media (min-width: $desktop) {
+        display: none;
+      }
+
+    }
+  }
+
+  &__autresProjets{
+    margin-top: 30px;
+
+
+
+    &__flex{
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+
+
+    &__galerie{
+    background-color: $bleuP;
+    height: 350px;
+    margin: 30px -10px 0 -10px;
+    padding: 20px 10px 0 10px;
+      @media (min-width: $desktop) {
+        border-radius: 8px;
+        width: 320px;
+        margin: 30px 20px 0 20px;
+      }
+
+      &__realisation{
+        height: 100%;
+
+
+        &__titre{
+          font-size: 18px;
+          margin-top: 20px;
+        }
+
+        &__nom{
+          font-size: 18px;
+          margin-top: 30px;
+        }
+
+        &__image{
+          width: 355px;
+          height: 200px;
+          border: 5px solid $orangeP;
+          border-radius: 8px;
+          @media (min-width: $desktop) {
+            width: 300px;
+            height: 170px;
+          }
+        }
+      }
+    }
+  }
+
+  &__boutonRetour{
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 18px;
+
+    @media (min-width: $desktop) {
+      width: 280px;
+      font-size: 16px;
+      margin-top: 80px;
+    }
+    i{
+      padding-right: 10px;
+      font-size: 18px;
+    }
+  }
+}

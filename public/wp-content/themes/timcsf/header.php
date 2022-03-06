@@ -8,24 +8,23 @@
             | <?php wp_title("", true);
         }?>
     </title>
-    <meta charset="<?php bloginfo('charset');?>"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Site Web de les TIM 2022">
-    <meta name="keywords" content="HTML, CSS, JavaScript, programmation, intégration, conception, média, vidéo, animation">
+    <?php echo get_post(477)->texte?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/liaisons/css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <?php wp_head();?>
 </head>
 
 <body>
-<header class="entete">
-    <h1 class="entete__titre">
-        <a href="<?php bloginfo("url");?>" title="<?php bloginfo("name");?>"<?php bloginfo("name");?></a>
-    </h1>
-    <h2 class="entete__slogan"><?php bloginfo("description");?></h2>
-</header>
-<?php if(has_nav_menu("principal")){?>
-    <nav class="navigation">
-        <?php wp_nav_menu(array("theme_location"=>"principal"));?>
-    </nav>
-<?php } ?>
-<div class="contenu">
+<a name="top"></a>
+<header class="header">
+    <div class="header__top">
+        <div class="conteneurHeader">
+            <div class="header__top__logo"><a href="<?php echo get_permalink(14)?>" class="header__top__logo__lien"><?php echo get_post(476)->titre?></a></div>
+            <?php if(has_nav_menu("principal")){?>
+                <nav class="navigation">
+                    <?php wp_nav_menu(array("theme_location"=>"principal"));?>
+                </nav>
+            <?php } ?>
+            <a class="header__top__bouton boutonInscrit" href="<?php echo get_post(470)->texte?>"><?php echo get_post(470)->titre?></a>
+        </div>
+    </div>

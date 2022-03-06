@@ -1,0 +1,442 @@
+
+
+
+
+
+
+.formation {
+
+  &__top {
+
+    &__info {
+      margin-top: 50px;
+      font-weight: 700;
+      font-size: 18px;
+      border: 5px solid $orangeP;
+      border-radius: 8px;
+      padding: 5px 10px;
+      @media (min-width: $desktop) {
+        max-width: 860px;
+        margin: 50px auto 0 auto;
+      }
+
+      &__p1{
+
+        &__span{
+          font-size: 18px;
+          color: $orangeP;
+          @media (min-width: $desktop) {
+            font-size: 24px;
+          }
+        }
+      }
+
+      &__p2 {
+        margin-top: 20px;
+      }
+    }
+
+    &__fichesInfo {
+
+      margin-top: 50px;
+
+      &__titre {
+        font-size: 24px;
+      }
+
+      &__fiches {
+        color: $blanc;
+        margin: 20px -10px 0 -10px;
+        @media (min-width: $desktop) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+
+        &__entete {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          @media (min-width: $desktop) {
+            justify-content: center;
+          }
+
+          &__h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            padding-left: 5px;
+
+            @media (min-width: $desktop) {
+              padding-bottom: 20px;
+            }
+          }
+
+          &__- {
+            font-size: 48px;
+            padding-right: 20px;
+            @media (min-width: $desktop) {
+              display: none;
+            }
+          }
+        }
+
+        &__fiche {
+          padding: 10px;
+          @media (min-width: 1000px) {
+            width: 500px;
+          }
+        }
+
+        &__p {
+          font-weight: 300;
+        }
+
+        &__titreListe {
+          margin-top: 30px;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+
+        &__listes {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &__liste {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  &__bourses {
+    color: $blanc;
+    background-color: $bleu4;
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+    &__titre {
+      padding-top: 20px;
+      font-size: 32px;
+      text-transform: uppercase;
+      text-align: center;
+      @media (min-width: $desktop){
+        font-size: 60px;
+      }
+    }
+
+    &__texte {
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    &__bouton {
+      margin-top: 30px;
+
+      & i{
+        padding-left: 10px;
+      }
+
+      &__alignRight{
+        @media (min-width: $desktop){
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &__bottom{
+
+    &__grille{
+      border: solid 5px $orangeP;
+      border-radius: 8px;
+      margin: 30px -10px;
+      padding: 20px 10px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
+
+        &__p{
+        padding-top: 20px;
+        font-weight: 300;
+      }
+
+      &__boutons{
+        &__grille{
+          margin-top: 20px;
+
+          & i{
+            padding-left: 10px;
+          }
+        }
+        &__p{
+          margin-top: 20px;
+          text-transform: uppercase;
+          font-size: 24px;
+          font-weight: 700;
+          text-align: center;
+        }
+        &__telecharger{
+          margin-top: 20px;
+
+          & i{
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+
+    &__temoignages{
+      margin: 0 -10px;
+      @media (min-width: $desktop) {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+      }
+
+
+        &__temoignage{
+        background-color: $bleuP;
+        color: $blanc;
+        padding: 20px 10px;
+        margin-top: 20px;
+        @media (min-width: $desktop) {
+          border-radius: 8px;
+        }
+      }
+
+      &__titre{
+        padding: 20px 10px 0 10px;
+        font-weight: 700;
+        @media (min-width: $desktop) {
+          padding-top: 0;
+        }
+      }
+
+      &__photoInfo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__photo{
+          background-color: $blanc;
+          color: $noir;
+          width: 178px;
+          height: 203px;
+          border-radius: 8px;
+
+          &__image{
+            border-radius: 8px;
+            border: solid 5px $blanc;
+            width: 168px;
+            height: 168px;
+          }
+
+          &__annee{
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+        }
+
+        &__info{
+          padding: 0 20px;
+          @media (min-width: $desktop) {
+            font-size: 24px;
+            font-weight: 700;
+          }
+
+
+
+            &__emploi{
+            padding-top: 20px;
+          }
+        }
+      }
+
+      &__texte{
+        margin-top: 20px;
+      }
+    }
+
+    &__inscription{
+      margin-top: 20px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
+
+      &__info{
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 300;
+
+        &__span{
+          font-weight: 700;
+          color: $bleuP;
+        }
+      }
+      &__sousTitre{
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+      }
+
+      &__tours{
+        display: flex;
+        flex-direction: row;
+        color: $blanc;
+        margin: 0 -10px;
+        @media (min-width: $desktop) {
+          margin: 0;
+          justify-content: center;
+        }
+        &__tour{
+          width: 94px;
+          text-align: center;
+          @media (min-width: $desktop) {
+            width: 100%;
+          }
+          &.t1{
+            background-color: $bleu2;
+          }
+          &.t2{
+            background-color: $bleuP;
+          }
+          &.t3{
+            background-color: $bleu4;
+          }
+          &.t4{
+            background-color: $bleu5;
+          }
+
+          &__xTour{
+            margin: 10px 0 20px 0;
+          }
+          &__dateTour{
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &__bouton{
+        margin: 20px 0;
+        &__alignRight{
+          @media (min-width: $desktop){
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    &__question{
+      border-top: solid 5px $bleuP;
+      border-bottom: solid 5px $bleuP;
+      margin: 30px -10px 0 -10px;
+      padding: 0 10px 30px 10px;
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
+
+      &__titre{
+        padding-top: 20px;
+      }
+      &__p{
+        padding-top: 20px;
+        font-weight: 300;
+
+        &__span{
+          font-weight: 700;
+          color: $bleuP;
+        }
+      }
+
+      &__boutonsSylvain{
+        font-size: 18px;
+        padding-top: 15px;
+        margin-top: 20px;
+      }
+    }
+
+    &__etudiantJour{
+      margin-top: 30px;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+      }
+
+      &__info{
+
+        &__p{
+          padding-top: 20px;
+          font-weight: 300;
+
+          &__span{
+            font-weight: 700;
+            color: $bleuP;
+          }
+        }
+
+        &__boutonsBenoit{
+          font-size: 18px;
+          padding-top: 15px;
+          margin-top: 20px;
+        }
+      }
+
+      &__image{
+        border: solid 5px $orangeP;
+        margin-top: 20px;
+        margin: 20px -10px 0 -10px;
+        width: 375px;
+        @media (min-width: $desktop) {
+          width: 100%;
+        }
+
+        }
+    }
+  }
+}
+
+.programmation{
+  background-color: $bleu5;
+}
+.integration{
+  background-color: $bleu4;
+}
+.conception{
+  background-color: $bleuP;
+}
+.media{
+  background-color: $bleu2;
+}
+.autres{
+  background-color: $bleu1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

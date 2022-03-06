@@ -1,0 +1,95 @@
+
+
+
+
+
+
+.realisations{
+
+  &__titre{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+
+    @media (min-width: $desktop) {
+
+      br{
+        display: none;
+      }
+    }
+  }
+
+  &__boutons{
+
+    &__navigation{
+      margin-top: 30px;
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+
+      &__lien{
+        margin-top: 20px;
+        @media (min-width: $desktop) {
+          width: 320px;
+        }
+      }
+    }
+  }
+
+  &__galerie{
+    margin: 30px -10px 0 -10px;
+    padding: 0 10px;
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__realisation{
+      display: flex;
+      flex-direction: column;
+      margin: 20px -10px 0 -10px;
+      padding: 10px 10px;
+      background-color: $bleuP;
+      height: 332px;
+      @media (min-width: $desktop) {
+        width: 320px;
+        height: 100%;
+        border-radius: 8px;
+        margin-top: 30px;
+      }
+
+      &__image{
+        height: 200px;
+        border-radius: 8px;
+        border: 5px solid $orangeP;
+      }
+
+
+      &__titre{
+        font-size: 18px;
+        padding-top: 10px;
+      }
+
+      &__nom{
+        font-size: 18px;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  &__boutons{
+    font-size: 18px;
+    padding-top: 15px;
+    margin-top: 30px;
+    @media (min-width: $desktop) {
+      margin-top: 50px;
+      width: 320px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}

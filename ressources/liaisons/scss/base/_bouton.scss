@@ -1,32 +1,87 @@
-/**
-* @author Prenom Nom courriel
-* @todo Compléter selon l'énoncé de l'exercice
-*/
 
-.bouton {
-  background-color: $vertLime;
-  border-radius: 18px;
-  color: black;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  &:after {
-    content: "»";
-    margin-left: 0.4em;
+
+
+
+
+
+.boutonInscrit{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: $orangeP;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+  @media (min-width: $desktop) {
+    width: 235px;
+    height: 40px;
+    padding: 8px 0;
+
   }
-  &--hover {
-    background-color: transparentize($vertLime, 0.25);
+
+  &:hover{
+    text-decoration: underline;
+    background-color: $orange4;
   }
-  &--active {
-    background-color: transparentize($vertLime, 0.5);
+  &:active{
+    text-decoration: underline;
+    background-color: $orange1;
+    color: $orange5;
   }
-  &--inverse {
-    background-color: white;
-    border: 2px solid $vertLime;
-    &--hover {
-      border-color: transparentize($vertLime, 0.25);
-    }
-    &--active {
-      border-color: transparentize($vertLime, 0.5);
+}
+
+.boutonBleu {
+  display: block;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: $bleuP;
+  color: $blanc;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+
+  &:hover{
+    text-decoration: underline;
+    background-color: $bleu4;
+  }
+  &:active{
+    text-decoration: underline;
+    background-color: $bleu1;
+    color: $bleu5;
+  }
+}
+
+.boutonHautPage{
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: right;
+  }
+
+    &__bouton{
+    @media (min-width: $desktop) {
+      background-color: $orangeP;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      border-radius: 40px;
+      padding: 15px 0;
+
+      &:hover{
+        background-color: $orange4;
+      }
+      &:active{
+        background-color: $orange1;
+        color: $orange5;
+      }
     }
   }
 }
