@@ -30,7 +30,7 @@
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(134)->titre?></h2>
                             <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
                         </div>
-                        <div>
+                        <div class="tiroir">
                             <?php echo get_post(134)->texte?>
                         </div>
                     </div>
@@ -249,14 +249,14 @@
                 <div>
                     <h2 class="formation__bottom__question__titre"><?php echo get_post(120)->titre?></h2>
                     <?php echo get_post(120)->texte?>
-                    <a class="formation__bottom__question__boutonsSylvain boutonBleu" href="<?php echo get_permalink(7)?>"><?php echo get_post(487)->texte?></a>
+                    <a class="formation__bottom__question__boutonsSylvain boutonBleu" href="<?php echo get_permalink(7)?>/?idResponsable=1"><?php echo get_post(487)->texte?></a>
                 </div>
             </div>
             <div class="formation__bottom__etudiantJour">
                 <div class="formation__bottom__etudiantJour__info">
                     <h2 class="formation__bottom__etudiantJour__info__titre"><?php echo get_post(118)->titre?></h2>
                     <?php echo get_post(118)->texte?>
-                    <a class="formation__bottom__etudiantJour__info__boutonsBenoit boutonBleu" href="<?php echo get_permalink(7)?>"><?php echo get_post(488)->texte?></a>
+                    <a class="formation__bottom__etudiantJour__info__boutonsBenoit boutonBleu" href="<?php echo get_permalink(7)?>/?idResponsable=4"><?php echo get_post(488)->texte?></a>
                     <img
                         class="formation__bottom__etudiantJour__image"
                         src="<?php echo get_template_directory_uri();?>/liaisons/images/etuJourTable.jpg"

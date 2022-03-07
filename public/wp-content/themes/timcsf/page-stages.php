@@ -37,7 +37,7 @@
             <div class="stages__contactezPascal__infos">
                 <?php echo get_post(837)->texte?>
             </div>
-            <a class="stages__contactezPascal__boutonPascal boutonBleu" href="#"><?php echo get_post(837)->titre?></a>
+            <a class="stages__contactezPascal__boutonPascal boutonBleu" href="<?php echo get_permalink(7)?>/?idResponsable=3"><?php echo get_post(837)->titre?></a>
         </div>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>

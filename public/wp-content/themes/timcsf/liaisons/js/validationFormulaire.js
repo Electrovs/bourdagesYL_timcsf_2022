@@ -78,14 +78,23 @@ const inputTelephone = document.getElementById("telephone");
 const inputSujet = document.getElementById("sujet");
 const inputMessage = document.getElementById("message");
 
+const pattern = /^[-a-zA-Zàâçéèêëîïôûùüÿñæœ ]+$/;
+const patternDestinataire = /^[1-9]$/;
+const patternCourriel = /^[a-zA-Z0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z]{2,}$/;
+const patternTelephone = /^[1-9]\d{2}-\d{3}-\d{4}$/;
+const patternMessage = /^[a-zA-Z0-9_.!@#$%^&*()?-]+$/;
 
+const userDestinataireInput = inputDestinataire.value.trim();
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+window.onload = () => {
+    if(userDestinataireInput === "4"){
+        inputTelephone.parentElement.style.display = "block";
+    } else{
+        inputTelephone.parentElement.style.display = "none";
 
-    const pattern = /^[-a-zA-Zàâçéèêëîïôûùüÿñæœ ]+$/;
-    const patternCourriel = /^[a-zA-Z0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z]{2,}$/;
-    const patternTelephone = /^[1-9]\d{2}-\d{3}-\d{4}$/;
+    }
+}
+const validation = (event) => {
 
     const userPrenomInput = inputPrenom.value.trim();
     const userNomInput = inputNom.value.trim();
@@ -95,16 +104,32 @@ form.addEventListener("submit", (e) => {
     const userSujetInput = inputSujet.value.trim();
     const userMessageInput = inputMessage.value.trim();
 
-    validerInput("prenom",userPrenomInput ,inputPrenom, jsonMessage, pattern);
-    validerInput("nom",userNomInput ,inputNom, jsonMessage, pattern);
-    validerInput("courriel",userCourrielInput ,inputCourriel, jsonMessage, patternCourriel);
-    validerInput("destinataire",userDestinataireInput ,inputDestinataire, jsonMessage, pattern);
-    validerInput("telephone",userTelephoneInput ,inputTelephone, jsonMessage, patternTelephone);
-    validerInput("sujet",userSujetInput ,inputSujet, jsonMessage, pattern);
-    validerInput("message",userMessageInput ,inputMessage, jsonMessage, pattern);
-
-
-});
+    switch(event.target.id) {
+        case "prenom":
+            validerInput("prenom",userPrenomInput ,inputPrenom, jsonMessage, pattern);
+            break;
+        case "nom":
+            validerInput("nom",userNomInput ,inputNom, jsonMessage, pattern);
+            break;
+        case "courriel":
+            validerInput("courriel",userCourrielInput ,inputCourriel, jsonMessage, patternCourriel);
+            break;
+        case "destinataire":
+            validerInput("destinataire",userDestinataireInput ,inputDestinataire, jsonMessage, patternDestinataire);
+            break;
+        case "telephone":
+            validerInput("telephone",userTelephoneInput ,inputTelephone, jsonMessage, patternTelephone);
+            break;
+        case "sujet":
+            validerInput("sujet",userSujetInput ,inputSujet, jsonMessage, patternMessage);
+            break;
+        case "message":
+            validerInput("message",userMessageInput ,inputMessage, jsonMessage, patternMessage);
+            break;
+        default:
+        // code block
+    }
+};
 
 const validerInput = (nomChamps, userInput, inputChamps, jsonMessage, pattern) => {
 
@@ -129,3 +154,20 @@ const validerInput = (nomChamps, userInput, inputChamps, jsonMessage, pattern) =
         erreurP.innerHTML = jsonMessage[nomChamps].erreurs.vide;
     }
 }
+
+const afficherTelephone = (event) => {
+    if(event.target.value === "4") {
+        inputTelephone.parentElement.style.display = "block";
+    } else {
+        inputTelephone.parentElement.style.display = "none";
+    }
+}
+
+inputPrenom.addEventListener("blur", validation);
+inputNom.addEventListener("blur", validation);
+inputCourriel.addEventListener("blur", validation);
+inputDestinataire.addEventListener("blur", validation);
+inputDestinataire.addEventListener("change", afficherTelephone);
+inputTelephone.addEventListener("blur", validation);
+inputSujet.addEventListener("blur", validation);
+inputMessage.addEventListener("blur", validation);
