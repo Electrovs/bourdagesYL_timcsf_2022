@@ -48,7 +48,8 @@
                 <?php }
             } ?>
         </div>
-        <form class="contact__formulaire" id="form" method="POST" novalidate>
+        <?php include ("liaisons/js/validationServeur.php"); ?>
+        <form class="contact__formulaire" id="form" method="post" action="" novalidate>
             <div class="contact__formulaire__groupInput" id="divPrenom">
                 <label for="prenom" class="contact__formulaire__label">Prénom</label>
                 <input name="prenom" id="prenom" type="text" class="contact__formulaire__input" required aria-describedby="erreur_prenom"  pattern="^[-a-zA-Zàâçéèêëîïôûùüÿñæœ ]+$">
@@ -73,6 +74,7 @@
                     <p class="contact__formulaire__erreur__p">Entrez un adresse courriel valide.</p>
                 </div>
             </div>
+
             <div class="contact__formulaire__groupInput">
                 <label for="destinataire" class="contact__formulaire__label">Destinataire</label>
                 <?php
@@ -127,7 +129,7 @@
             <div class="contact__formulaire__groupInput telephone">
                 <label for="telephone" class="contact__formulaire__label">Téléphone</label>
                 <p class="contact__formulaire__exemple">Ex:123-456-7890</p>
-                <input name="telephone" id="telephone" type="tel" class="contact__formulaire__input" required aria-describedby="erreur_telephone"  pattern="^[1-9]\d{2}-\d{3}-\d{4}$">
+                <input name="telephone" id="telephone" type="tel" class="contact__formulaire__input" aria-describedby="erreur_telephone"  pattern="^[1-9]\d{2}-\d{3}-\d{4}$">
                 <div class="contact__formulaire__erreur" id="erreur_telephone">
                     <i class="contact__formulaire__erreur__icon fa fa-exclamation-circle"></i>
                     <p class="contact__formulaire__erreur__p">Entrez votre numéro de téléphone au format 123-456-7890.</p>
@@ -154,12 +156,20 @@
                 </div>
             </div>
             <div class="contact__forrmulaire__captcha">Captcha</div>
-            <button class="contact__formulaire__bouton boutonBleu" type="submit">Envoyer</button>
+            <button class="contact__formulaire__bouton boutonBleu" name="submit" type="submit">Envoyer</button>
         </form>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>
     </div>
+    <?php echo $tMessagesJson["telephone"]["erreurs"]["motif"]; ?>
+    <?php echo $prenom["valide"] ?>
+    <?php echo $prenom["message"] ?>
+    <?php echo $prenom["valeur"] ?>
+    <?php echo $tValidation["prenom"]["valide"] ?>
+    <?php echo $tValidation["telephone"]["valide"] ?>
+    <?php echo $nbBonneReponse ?>
+    <?php echo $succes ?>
 </main>
-    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/validationFormulaire.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/validation545Formulaire.js"></script>
 <?php get_footer(); ?>

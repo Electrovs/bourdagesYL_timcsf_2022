@@ -94,6 +94,11 @@ window.onload = () => {
 
     }
 }
+
+const preventDefault = (e) => {
+    e.preventDefault();
+}
+
 const validation = (event) => {
 
     const userPrenomInput = inputPrenom.value.trim();
@@ -171,3 +176,4 @@ inputDestinataire.addEventListener("change", afficherTelephone);
 inputTelephone.addEventListener("blur", validation);
 inputSujet.addEventListener("blur", validation);
 inputMessage.addEventListener("blur", validation);
+form.addEventListener("submit", preventDefault);

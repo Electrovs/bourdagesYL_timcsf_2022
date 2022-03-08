@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+
 if (function_exists("register_sidebar")){
     $args = array(
         "name"=> __("Ma barre latérale", "theme_text_domain"),
