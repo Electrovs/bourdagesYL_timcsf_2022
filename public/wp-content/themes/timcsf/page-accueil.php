@@ -28,39 +28,47 @@
                     <div class="formation__top__fichesInfo__fiches__fiche programmation">
                         <div class="formation__top__fichesInfo__fiches__entete">
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(134)->titre?></h2>
-                            <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
+                            <p class="formation__top__fichesInfo__fiches__entete__-" id="btnProg">+</p>
                         </div>
-                        <div class="tiroir">
+                        <div class="tiroirFermer" id="divProg">
                             <?php echo get_post(134)->texte?>
                         </div>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__fiche integration">
                         <div class="formation__top__fichesInfo__fiches__entete">
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(133)->titre?></h2>
-                            <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
+                            <p class="formation__top__fichesInfo__fiches__entete__-" id="btnInt">+</p>
                         </div>
-                        <?php echo get_post(133)->texte?>
+                        <div class="tiroirFermer" id="divInt">
+                            <?php echo get_post(133)->texte?>
+                        </div>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__fiche conception">
                         <div class="formation__top__fichesInfo__fiches__entete">
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(131)->titre?></h2>
-                            <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
+                            <p class="formation__top__fichesInfo__fiches__entete__-" id="btnCon">+</p>
                         </div>
+                        <div class="tiroirFermer" id="divCon">
                         <?php echo get_post(131)->texte?>
+                        </div>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__fiche media">
                         <div class="formation__top__fichesInfo__fiches__entete">
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(132)->titre?></h2>
-                            <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
+                            <p class="formation__top__fichesInfo__fiches__entete__-" id="btnMedia">+</p>
                         </div>
+                        <div class="tiroirFermer" id="divMedia">
                         <?php echo get_post(132)->texte?>
+                        </div>
                     </div>
                     <div class="formation__top__fichesInfo__fiches__fiche autres">
                         <div class="formation__top__fichesInfo__fiches__entete">
                             <h2 class="formation__top__fichesInfo__fiches__entete__h2"><?php echo get_post(135)->titre?></h2>
-                            <p class="formation__top__fichesInfo__fiches__entete__-">-</p>
+                            <p class="formation__top__fichesInfo__fiches__entete__-" id="btnAutres">+</p>
                         </div>
+                        <div class="tiroirFermer" id="divAutres">
                         <?php echo get_post(135)->texte?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,7 +249,7 @@
                         <?php echo get_post(486)->texte?>
                     </div>
                     <div class="formation__bottom__inscription__bouton__alignRight">
-                        <a class="formation__bottom__inscription__bouton boutonInscrit" href="<?php echo get_post(470)->texte?>"><?php echo get_post(470)->titre?></a>
+                        <a class="formation__bottom__inscription__bouton boutonInscrit" href="<?php echo get_post(470)->texte?>"><?php echo get_post(470)->titre?><i class="fa fa-external-link"></i></a>
                     </div>
                 </div>
             </div>
@@ -270,4 +278,5 @@
         </div>
     </div>
 </main>
+    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/tiroir.js"></script>
 <?php get_footer(); ?>

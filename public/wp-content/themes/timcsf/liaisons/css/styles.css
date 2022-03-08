@@ -470,6 +470,9 @@ a:hover, a:active, a:link, a:visited {
     padding: 8px 0;
   }
 }
+.boutonInscrit i {
+  padding-left: 20px;
+}
 .boutonInscrit:hover {
   text-decoration: underline;
   background-color: #DA690A;
@@ -501,6 +504,11 @@ a:hover, a:active, a:link, a:visited {
   text-decoration: underline;
   background-color: #2688D0;
   color: #001058;
+}
+.boutonBleu.deactivate {
+  background-color: #FFC364;
+  color: #BC4B00;
+  text-decoration: underline;
 }
 
 @media (min-width: 940px) {
@@ -949,15 +957,6 @@ p, h1, h2, h3 {
   background-color: #2688D0;
 }
 
-.poutine {
-  display: none;
-}
-@media (min-width: 940px) {
-  .poutine {
-    display: block;
-  }
-}
-
 .contact__titre {
   text-transform: uppercase;
   font-size: 32px;
@@ -1111,6 +1110,9 @@ p, h1, h2, h3 {
   .realisations__titre br {
     display: none;
   }
+}
+.realisations__titre__annee {
+  font-weight: 500;
 }
 .realisations__boutons__navigation {
   margin-top: 30px;
@@ -1431,19 +1433,23 @@ p, h1, h2, h3 {
 }
 .ficheRealisation__boutonRetour {
   padding-top: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 18px;
 }
 @media (min-width: 940px) {
   .ficheRealisation__boutonRetour {
     width: 280px;
     font-size: 16px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 .ficheRealisation__boutonRetour i {
   padding-right: 10px;
   font-size: 18px;
+}
+
+.eeb-encoded {
+  display: none;
 }
 
 .stages__titre {
@@ -1922,12 +1928,24 @@ p, h1, h2, h3 {
   }
 }
 
-.tiroir {
-  display: none;
+.tiroirFermer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
 }
 @media (min-width: 940px) {
-  .tiroir {
-    display: block;
+  .tiroirFermer {
+    max-height: 100%;
+  }
+}
+
+.tiroirFermer.tiroirOuvert {
+  overflow: hidden;
+  max-height: 300px;
+}
+@media (min-width: 940px) {
+  .tiroirFermer.tiroirOuvert {
+    max-height: 100%;
   }
 }
 

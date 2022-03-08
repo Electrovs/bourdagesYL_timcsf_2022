@@ -1,8 +1,18 @@
 
 
-.tiroir {
-  display: none;
+.tiroirFermer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    @media (min-width: $desktop) {
+      max-height: 100%;
+    }
+  }
+
+.tiroirFermer.tiroirOuvert {
+  overflow: hidden;
+  max-height: 300px;
   @media (min-width: $desktop) {
-    display: block;
+    max-height: 100%;
   }
 }

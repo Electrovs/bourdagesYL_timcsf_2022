@@ -74,6 +74,7 @@ if(get_field("session", $arrCours[0]->ID) == "1" || get_field("session", $arrCou
 </header>
 <main class="ficheRealisation">
     <div class="conteneur">
+        <a class="ficheRealisation__boutonRetour boutonBleu" href="<?php echo get_permalink(388)?>"><i class="fa fa-arrow-left"></i><?php echo get_post(842)->titre?></a>
         <img
                 class="ficheRealisation__photoPrincipale"
                 src="<?php echo get_field("photo_1")["sizes"]["large"]; ?>"
@@ -200,7 +201,6 @@ if (get_field("pseudo_twitter", $arrFinissants[0]->ID) != null){?>
             } ?>
             </div>
         </div>
-        <a class="ficheRealisation__boutonRetour boutonBleu" href="<?php echo get_permalink(388)?>"><i class="fa fa-arrow-left"></i><?php echo get_post(842)->titre?></a>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>

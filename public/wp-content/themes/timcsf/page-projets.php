@@ -78,12 +78,27 @@
         wp_reset_postdata();
 
         ?>
-        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/><?php echo $anneeTitre?> année</h1>
-        <form class="realisations__boutons__navigation" action="" method="post">
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
-        </form>
+        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/><span class="realisations__titre__annee"><?php echo $anneeTitre?> année</span></h1>
+        <?php
+        if($anneeTitre === "1re") { ?>
+            <form class="realisations__boutons__navigation" action="" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
+            </form>
+    <?php } elseif ($anneeTitre === "2e") { ?>
+            <form class="realisations__boutons__navigation" action="" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled  name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
+            </form>
+    <?php } elseif ($anneeTitre === "3e") { ?>
+            <form class="realisations__boutons__navigation" action="" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled name="btn_03">3e année</button>
+            </form>
+        <?php } ?>
         <div class="realisations__galerie">
             <?php
             //Les Projets
