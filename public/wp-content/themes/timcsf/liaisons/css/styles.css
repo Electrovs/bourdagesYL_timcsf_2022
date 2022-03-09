@@ -1013,6 +1013,17 @@ p, h1, h2, h3 {
   font-size: 16px;
   font-weight: 300;
 }
+.contact__messageEnvoi {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+.contact__messageEnvoi__messageSucces {
+  color: forestgreen;
+}
+.contact__messageEnvoi__messageFail {
+  color: red;
+}
 .contact__formulaire {
   margin-top: 50px;
   border: solid 5px #F88728;

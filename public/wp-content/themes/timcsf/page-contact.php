@@ -49,7 +49,16 @@
             } ?>
         </div>
         <?php include ("liaisons/js/validationServeur.php"); ?>
-        <form class="contact__formulaire" id="form" method="post" action="" novalidate>
+        <div class="contact__messageEnvoi">
+            <?php if($envoiMessage != "") { ?>
+            <?php if($envoiMessage == "oui" ) { ?>
+                <p class="contact__messageEnvoi__messageSucces">Le courriel a été envoyé.</p>
+            <?php } else { ?>
+                <p class="contact__messageEnvoi__messageFail">L'envoi du courriel a avorté.</p>
+            <?php } ?>
+        <?php } ?>
+        </div>
+        <form class="contact__formulaire" id="form" method="post" action="#" novalidate>
             <div class="contact__formulaire__groupInput" id="divPrenom">
                 <label for="prenom" class="contact__formulaire__label">Prénom</label>
                 <input name="prenom" id="prenom" type="text" class="contact__formulaire__input" value="<?php echo $tValidation["prenom"]["valeur"] ?>" required aria-describedby="erreur_prenom"  pattern="^[-a-zA-Zàâçéèêëîïôûùüÿñæœ ]+$">
@@ -199,10 +208,10 @@
                 <?php } ?>
             </div>
             <div class="g-recaptcha" data-sitekey="6Ld2xZAUAAAAAJ2AKX2HBkO1X3vSb6vuQ4ireXAK"></div>
-            <?php if($captcha == false){ ?>
+            <?php if($captchaErreur != ""){ ?>
                 <div class="contact__formulaire__erreur__serveur">
                     <i class="contact__formulaire__erreur__serveur__icon fa fa-exclamation-circle"></i>
-                    <p class="contact__formulaire__erreur__serveur__p"><?php echo $erreurCaptcha ?></p>
+                    <p class="contact__formulaire__erreur__serveur__p"><?php echo $captchaMessage ?></p>
                 </div>
             <?php } ?>
             <button class="contact__formulaire__bouton boutonBleu" name="submit" type="submit">Envoyer</button>
@@ -211,8 +220,7 @@
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>
     </div>
-    <?php echo $test ?>
 </main>
-    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/validation545Formulaire.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/liaisons/js/validationFormulaire.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <?php get_footer(); ?>

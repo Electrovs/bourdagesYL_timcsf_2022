@@ -3,6 +3,14 @@
 session_start();
 
 
+add_filter( "intermediate_image_sizes_advanced", "prefix_remove_default_images" );
+function prefix_remove_default_images( $sizes ) {
+    unset( $sizes["medium_large"]);
+    unset( $sizes["1536x1536"]);
+    return $sizes;
+}
+
+
 if (function_exists("register_sidebar")){
     $args = array(
         "name"=> __("Ma barre latérale", "theme_text_domain"),

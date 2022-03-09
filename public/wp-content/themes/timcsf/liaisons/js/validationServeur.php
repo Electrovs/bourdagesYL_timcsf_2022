@@ -11,6 +11,8 @@ $patternDestinataire = "/^[1-9]$/";
 $patternCourriel = "/^[a-zA-Z0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z]{2,}$/";
 $patternTelephone = "/^[1-9]\d{2}-\d{3}-\d{4}$/";
 $patternMessage = "/^[a-zA-Z0-9_.!@#$%^&*()?-]+$/";
+$captchaErreur = "";
+$envoiMessage = "";
 
 if(isset($_POST["submit"])) {
     $prenomInput = validerChampsServeur("prenom", $tMessagesJson, $pattern);
@@ -21,7 +23,7 @@ if(isset($_POST["submit"])) {
     $sujetInput = validerChampsServeur("sujet", $tMessagesJson, $patternMessage);
     $messageInput = validerChampsServeur("message", $tMessagesJson, $patternMessage);
 
-    $erreurCaptcha = $tMessagesJson["humain"]["erreurs"]["vide"];
+    $captchaMessage = $tMessagesJson["humain"]["erreurs"]["vide"];
     $successEnvoi = "";
 
     $tValidation=array("prenom"=>$prenomInput, "nom"=>$nomInput, "courriel"=>$courrielInput,
@@ -64,12 +66,16 @@ if(isset($_POST["submit"])) {
 //                $envoi = wp_mail($to, $subjet, strip_tags(trim($_POST["message"])), $headers);
 //
 //                if($envoi){
+//                    $envoiMessage = "oui";
 //                    $successEnvoi = $tMessagesJson["retroactions"]["courriel"]["envoyer"];
 //                } else {
+//                    $envoiMessage = "non";
 //                    $successEnvoi = $tMessagesJson["retroactions"]["courriel"]["avorter"];
 //                }
 //            }
 //        }
+    } else {
+        $captchaErreur = "erreur";
     }
 }
 
