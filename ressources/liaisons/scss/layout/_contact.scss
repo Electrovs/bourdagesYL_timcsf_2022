@@ -132,6 +132,17 @@
         color: red;
         margin-left: 10px;
       }
+
+      &__serveur{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        color: red;
+
+        &__p{
+          margin-left: 10px;
+        }
+      }
     }
 
     &__bouton{

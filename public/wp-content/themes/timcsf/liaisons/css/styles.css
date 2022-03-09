@@ -1084,6 +1084,15 @@ p, h1, h2, h3 {
   color: red;
   margin-left: 10px;
 }
+.contact__formulaire__erreur__serveur {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  color: red;
+}
+.contact__formulaire__erreur__serveur__p {
+  margin-left: 10px;
+}
 .contact__formulaire__bouton {
   color: #FFFFFF;
   margin: 30px 0;

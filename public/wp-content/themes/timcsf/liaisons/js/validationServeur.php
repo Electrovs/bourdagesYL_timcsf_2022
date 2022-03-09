@@ -13,17 +13,20 @@ $patternTelephone = "/^[1-9]\d{2}-\d{3}-\d{4}$/";
 $patternMessage = "/^[a-zA-Z0-9_.!@#$%^&*()?-]+$/";
 
 if(isset($_POST["submit"])) {
-    $prenom = validerChampsServeur("prenom", $tMessagesJson, $pattern);
-    $nom = validerChampsServeur("nom", $tMessagesJson, $pattern);
-    $courriel = validerChampsServeur("courriel", $tMessagesJson, $patternCourriel);
-    $destinataire = validerChampsServeur("destinataire", $tMessagesJson, $patternDestinataire);
-    $telephone = validerChampsServeur("telephone", $tMessagesJson, $patternTelephone);
-    $sujet = validerChampsServeur("sujet", $tMessagesJson, $patternMessage);
-    $message = validerChampsServeur("message", $tMessagesJson, $patternMessage);
+    $prenomInput = validerChampsServeur("prenom", $tMessagesJson, $pattern);
+    $nomInput = validerChampsServeur("nom", $tMessagesJson, $pattern);
+    $courrielInput = validerChampsServeur("courriel", $tMessagesJson, $patternCourriel);
+    $destinataireInput = validerChampsServeur("destinataire", $tMessagesJson, $patternDestinataire);
+    $telephoneInput = validerChampsServeur("telephone", $tMessagesJson, $patternTelephone);
+    $sujetInput = validerChampsServeur("sujet", $tMessagesJson, $patternMessage);
+    $messageInput = validerChampsServeur("message", $tMessagesJson, $patternMessage);
 
-    $tValidation=array("prenom"=>$prenom, "nom"=>$nom, "courriel"=>$courriel,
-        "destinataire"=>$destinataire, "telephone"=>$telephone, "sujet"=>$sujet,
-        "message"=>$message);
+    $erreurCaptcha = $tMessagesJson["humain"]["erreurs"]["vide"];
+    $successEnvoi = "";
+
+    $tValidation=array("prenom"=>$prenomInput, "nom"=>$nomInput, "courriel"=>$courrielInput,
+        "destinataire"=>$destinataireInput, "telephone"=>$telephoneInput, "sujet"=>$sujetInput,
+        "message"=>$messageInput);
 
     $nbBonneReponse = 0;
     foreach ($tValidation as $props){
@@ -36,12 +39,37 @@ if(isset($_POST["submit"])) {
             }
         }
     }
+    if(isset($_POST["g-recaptcha-response"])){
+        $captcha = $_POST["g-recaptcha-response"];
+    }
 
-    if($nbBonneReponse < 6) {
-        $succes = "Nope";
-
-    } else {
-        $succes = "yess";
+    if($captcha != false) {
+//        if($nbBonneReponse === 6) {
+//            $secretKey = "6Ld2xZAUAAAAAJ2AKX2HBkO1X3vSb6vuQ4ireXAK";
+//            $ip=$_SERVER["REMOTE_ADDR"];
+//            $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=.$ip");
+//            $responseKeys = json_decode($response, true);
+//
+//
+//            if(intval($responseKeys["success"]) === 1) {
+//
+//                //$post=get_post($destinataire);
+//                //to = get_field("courriel_responsable");
+//
+//                $to = get_option("admin_email");
+//                $subjet = "Quelqu'un a envoyé un message depuis le site ".get_bloginfo("name");
+//
+//                $headers = "From: ". trim($_POST["courriel"]) . "\r\n" . "Reply-to: " . trim($_POST["courriel"]) . "\r\n";
+//
+//                $envoi = wp_mail($to, $subjet, strip_tags(trim($_POST["message"])), $headers);
+//
+//                if($envoi){
+//                    $successEnvoi = $tMessagesJson["retroactions"]["courriel"]["envoyer"];
+//                } else {
+//                    $successEnvoi = $tMessagesJson["retroactions"]["courriel"]["avorter"];
+//                }
+//            }
+//        }
     }
 }
 
