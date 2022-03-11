@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 
 add_filter( "intermediate_image_sizes_advanced", "prefix_remove_default_images" );
 function prefix_remove_default_images( $sizes ) {

@@ -11,6 +11,7 @@ $patternDestinataire = "/^[1-9]$/";
 $patternCourriel = "/^[a-zA-Z0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[.][a-zA-Z]{2,}$/";
 $patternTelephone = "/^[1-9]\d{2}-\d{3}-\d{4}$/";
 $patternMessage = "/^[a-zA-Z0-9_.!@#$%^&*()?-]+$/";
+
 $captchaErreur = "";
 $envoiMessage = "";
 
