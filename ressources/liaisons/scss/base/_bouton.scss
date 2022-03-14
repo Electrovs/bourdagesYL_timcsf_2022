@@ -23,6 +23,9 @@
     padding: 8px 0;
 
   }
+  & i{
+    padding-left: 20px;
+  }
 
   &:hover{
     text-decoration: underline;
@@ -56,6 +59,12 @@
     text-decoration: underline;
     background-color: $bleu1;
     color: $bleu5;
+  }
+
+  &.deactivate{
+    background-color: $orange1;
+    color: $orange5;
+    text-decoration: underline;
   }
 }
 

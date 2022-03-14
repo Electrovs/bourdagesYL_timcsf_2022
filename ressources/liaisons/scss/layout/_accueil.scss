@@ -222,11 +222,14 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        @media (min-width: $desktop) {
+          justify-content: space-around;
+        }
 
-        &__photo{
+          &__photo{
           background-color: $blanc;
           color: $noir;
-          width: 178px;
+          width: 168px;
           height: 203px;
           border-radius: 8px;
 
@@ -247,6 +250,8 @@
         &__info{
           padding: 0 20px;
           @media (min-width: $desktop) {
+            padding: 0;
+            width: 220px;
             font-size: 24px;
             font-weight: 700;
           }
@@ -423,11 +428,6 @@
 .autres{
   background-color: $bleu1;
 }
-
-
-
-
-
 
 
 

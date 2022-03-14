@@ -78,12 +78,27 @@
         wp_reset_postdata();
 
         ?>
-        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/><?php echo $anneeTitre?> année</h1>
-        <form class="realisations__boutons__navigation" action="" method="post">
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
-            <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
-        </form>
+        <h1 class="realisations__titre"><?php echo get_post(838)->titre?> <br/><span class="realisations__titre__annee"><?php echo $anneeTitre?> année</span></h1>
+        <?php
+        if($anneeTitre === "1re") { ?>
+            <form class="realisations__boutons__navigation" action="#" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
+            </form>
+    <?php } elseif ($anneeTitre === "2e") { ?>
+            <form class="realisations__boutons__navigation" action="#" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled  name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_03">3e année</button>
+            </form>
+    <?php } elseif ($anneeTitre === "3e") { ?>
+            <form class="realisations__boutons__navigation" action="#" method="post">
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_01">1re année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu" name="btn_02">2e année</button>
+                <button class="realisations__boutons__navigation__lien boutonBleu deactivate" disabled name="btn_03">3e année</button>
+            </form>
+        <?php } ?>
         <div class="realisations__galerie">
             <?php
             //Les Projets
@@ -102,6 +117,14 @@
             $the_query = new WP_Query($args);
 
             $intpost = 1;
+            $nbRealisation = 0;
+            $realisationParPage = 5;
+
+            if(isset($_POST["plusRealisation"])) {
+                $realisationParPage = $_POST["realisationParPage"] + 6;
+            }
+
+
 
             if($the_query->have_posts()){
                 while($the_query->have_posts()) {
@@ -112,7 +135,9 @@
 
                     for($intcpt=0; $intcpt<count($arrCours); $intcpt++){
 
-                        if(get_field("cours_id")==get_field("id", $arrCours[$intcpt]->ID)){?>
+
+                        if(get_field("cours_id")==get_field("id", $arrCours[$intcpt]->ID)){
+                            if($nbRealisation <= $realisationParPage) { ?>
                             <a href="<?php the_permalink();?>" class="realisations__galerie__realisation">
                                 <img
                                         class="realisations__galerie__realisation__image"
@@ -128,12 +153,26 @@
                                     <?php } ?>
                                 <?php } ?>
                             </a>
+                    <?php $nbRealisation++; } ?>
                  <?php } ?>
               <?php } ?>
           <?php }
             } ?>
         </div>
-        <a class="realisations__boutons boutonBleu" href="#"><?php echo get_post(840)->titre?></a>
+        <form action="#" method="post" novalidate>
+            <?php if(isset($_POST["btn_01"])) { ?>
+                <input type="hidden" name="btn_01">
+            <?php } ?>
+            <?php if(isset($_POST["btn_02"])) { ?>
+                <input type="hidden" name="btn_02">
+            <?php } ?>
+            <?php if(isset($_POST["btn_03"])) { ?>
+                <input type="hidden" name="btn_03">
+            <?php } ?>
+            <input type="hidden" value="boutonPlusrealisation">
+            <input type="hidden" name="realisationParPage" value="<?php echo $realisationParPage ?>">
+            <button class="realisations__boutons boutonBleu" name="plusRealisation" ><?php echo get_post(840)->titre?></button>
+        </form>
         <div class="boutonHautPage">
             <a class="boutonHautPage__bouton fa fa-arrow-up" href="#top"></a>
         </div>

@@ -470,6 +470,9 @@ a:hover, a:active, a:link, a:visited {
     padding: 8px 0;
   }
 }
+.boutonInscrit i {
+  padding-left: 20px;
+}
 .boutonInscrit:hover {
   text-decoration: underline;
   background-color: #DA690A;
@@ -501,6 +504,11 @@ a:hover, a:active, a:link, a:visited {
   text-decoration: underline;
   background-color: #2688D0;
   color: #001058;
+}
+.boutonBleu.deactivate {
+  background-color: #FFC364;
+  color: #BC4B00;
+  text-decoration: underline;
 }
 
 @media (min-width: 940px) {
@@ -761,10 +769,15 @@ p, h1, h2, h3 {
   flex-direction: row;
   align-items: center;
 }
+@media (min-width: 940px) {
+  .formation__bottom__temoignages__photoInfo {
+    justify-content: space-around;
+  }
+}
 .formation__bottom__temoignages__photoInfo__photo {
   background-color: #FFFFFF;
   color: #000000;
-  width: 178px;
+  width: 168px;
   height: 203px;
   border-radius: 8px;
 }
@@ -784,6 +797,8 @@ p, h1, h2, h3 {
 }
 @media (min-width: 940px) {
   .formation__bottom__temoignages__photoInfo__info {
+    padding: 0;
+    width: 220px;
     font-size: 24px;
     font-weight: 700;
   }
@@ -998,6 +1013,17 @@ p, h1, h2, h3 {
   font-size: 16px;
   font-weight: 300;
 }
+.contact__messageEnvoi {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+.contact__messageEnvoi__messageSucces {
+  color: forestgreen;
+}
+.contact__messageEnvoi__messageFail {
+  color: red;
+}
 .contact__formulaire {
   margin-top: 50px;
   border: solid 5px #F88728;
@@ -1069,6 +1095,15 @@ p, h1, h2, h3 {
   color: red;
   margin-left: 10px;
 }
+.contact__formulaire__erreur__serveur {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  color: red;
+}
+.contact__formulaire__erreur__serveur__p {
+  margin-left: 10px;
+}
 .contact__formulaire__bouton {
   color: #FFFFFF;
   margin: 30px 0;
@@ -1077,6 +1112,10 @@ p, h1, h2, h3 {
   .contact__formulaire__bouton {
     width: 300px;
   }
+}
+
+.telephone {
+  display: none;
 }
 
 .erreur label {
@@ -1098,6 +1137,9 @@ p, h1, h2, h3 {
   .realisations__titre br {
     display: none;
   }
+}
+.realisations__titre__annee {
+  font-weight: 500;
 }
 .realisations__boutons__navigation {
   margin-top: 30px;
@@ -1418,19 +1460,23 @@ p, h1, h2, h3 {
 }
 .ficheRealisation__boutonRetour {
   padding-top: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 18px;
 }
 @media (min-width: 940px) {
   .ficheRealisation__boutonRetour {
     width: 280px;
     font-size: 16px;
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 .ficheRealisation__boutonRetour i {
   padding-right: 10px;
   font-size: 18px;
+}
+
+.eeb-encoded {
+  display: none;
 }
 
 .stages__titre {
@@ -1735,7 +1781,7 @@ p, h1, h2, h3 {
     z-index: 99;
     top: 25%;
     width: 100%;
-    padding-left: 15%;
+    padding-left: 30%;
   }
 }
 .header__bandeau__blockTitre__titre {
@@ -1906,6 +1952,27 @@ p, h1, h2, h3 {
     width: 450px;
     left: 16.5rem;
     top: 25px;
+  }
+}
+
+.tiroirFermer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+@media (min-width: 940px) {
+  .tiroirFermer {
+    max-height: 100%;
+  }
+}
+
+.tiroirFermer.tiroirOuvert {
+  overflow: hidden;
+  max-height: 300px;
+}
+@media (min-width: 940px) {
+  .tiroirFermer.tiroirOuvert {
+    max-height: 100%;
   }
 }
 

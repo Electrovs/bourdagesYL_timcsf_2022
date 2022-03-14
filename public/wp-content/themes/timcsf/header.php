@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html <?php language_attributes();?>>
 <head>
     <title><?php bloginfo("name");
@@ -25,6 +25,6 @@
                     <?php wp_nav_menu(array("theme_location"=>"principal"));?>
                 </nav>
             <?php } ?>
-            <a class="header__top__bouton boutonInscrit" href="<?php echo get_post(470)->texte?>"><?php echo get_post(470)->titre?></a>
+            <a class="header__top__bouton boutonInscrit" href="<?php echo get_post(470)->texte?>"><?php echo get_post(470)->titre?><i class="fa fa-external-link"></i></a>
         </div>
     </div>
